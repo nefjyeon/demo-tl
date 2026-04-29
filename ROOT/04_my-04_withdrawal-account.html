@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+
+  <div class="container-fluid my">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content">
+      <div class="sub-title mb-5 pt-4 d-flex justify-content-end">
+        <p class="">MY > 출금/계좌관리</p>
+      </div>
+      <div class="wrap-search col-xl-12 col-xs-12 col-12 acc-wrap">
+        <div class="col-sm-5 mb-4 px-0 col-12">            
+          <div class="py-3 withdrawa-acco">
+            <div class="col-sm-12 d-flex py-3 px-5 justify-content-between align-items-center">
+              <p class="font-weight-bold acc d-flex align-items-center">보유포인트</p>
+              <p class="acc-text">130,000 P</p>
+            </div>
+            <div class="col-sm-12 d-flex py-3 px-5 align-items-center">
+              <p class="flex-grow-1 font-weight-bold acc d-flex align-items-center">내계좌</p>
+              <p class="px-4 acc-text">하나은행</p>
+              <p class="acc-text">110000111222</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex col-sm-5 col-12 mb-3 mt-2 account-btn">
+          <button type="button" class="btn col-sm-6">출금신청</button>
+          <!--출금신청 모달 -> 
+            출금 신청건이 이미 있습니다.
+            완료 후 다시 신청해주세요.
+          -->
+          <button type="button" class="btn col-sm-6" onclick="location.href='https://design.realclick.co.kr/triplink-dash/04_my-05_add-account.html'">계좌관리</button>
+        </div> 
+      </div>
+      <div class="form-login form-join mt-3"><!--수정건 / 클래스 2개 삭제-->
+        <form action="" class="form-web">
+          <div class="titleCont business mb-2">
+            <h3>출금내역</h3>
+          </div>  
+          <fieldset class="withdrawal-filtering-field"><!--수정건 / 클래스 추가-->               
+            <div class="d-flex row col-sm-12 acc align-items-center">
+              <div class="col-4 col-sm-2 custom-control with"><!--수정건 / 클래스 추가-->
+                <select name="" id="" class="custom-select custom-select-sm">
+                  <option value="" selected>신청일</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="d-flex row col-12 col-sm-10 align-items-center">
+                <div class="col-4 col-sm-3 account04 date"><!--수정건 / 클래스 추가-->
+                  <div class="input-daterange" id=""><!--수정건 / 아이디 삭제-->  
+                    <input type="text" class="eDate form-control" id="eData" name="end">
+                  </div>                        
+                </div>
+                <div class="acc-span">
+                  <span>~</span>
+                </div>               
+                <div class="col-4 col-sm-3 account04 date"><!--수정건 / 클래스 추가-->
+                  <div class="input-daterange" id=""><!--수정건 / 아이디 삭제-->
+                    <input type="text" class="eDate form-control" id="eData" name="end">
+                  </div>                        
+                </div>
+                <div class="col-3 col-sm-3 bt"><!--수정건 / 클래스 추가-->
+                  <button type="button" class="btn-sm btn-secondary">조회</button><!--수정건 / 클래스 변경-->
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>     
+      <div class="form-login form-join mt-4 form-mob"><!--수정건 / 클래스 2개 삭제-->
+        <form action="" class="">
+          <fieldset>
+            <div class="d-flex row align-items-center justify-content-between">
+              <div class="business">
+                <h3>출금내역</h3>
+              </div>
+              <div class="col-4 col-sm-2 acc account03">
+                <select name="" id="" class="custom-select custom-select-sm">
+                  <option value="" selected>20일</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>                                 
+            </div>     
+          </fieldset>                      
+        </form>
+      </div>
+      <div class="form-login form-join mt-1 form-mob"><!--수정건 / 클래스 2개 삭제-->
+        <form action="" class="">
+          <fieldset>
+            <div class="col-12 col-sm-12 acc mt-1">
+              <div class="">
+                <select name="" id="" class="custom-select custom-select-sm">
+                  <option value="" selected>신청일</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="form-login form-join mt-1 form-mob"><!--수정건 / 클래스 2개 삭제-->
+        <form action="" class="">
+          <fieldset>
+            <div class="col-12 col-sm-12 acc mt-1 d-flex align-items-center">
+              <div class="col-4 account-btn wrap-date"><!--수정건 / 클래스 추가-->
+                <div class="input-daterange" id=""><!--수정건 / 아이디 삭제-->                 
+                  <input type="text" class="eDate form-control" id="eData" name="end">
+                </div>                        
+              </div>
+              <div class="acc-span col-1 text-center">
+                <span>~</span>
+              </div>               
+              <div class="col-4 account-btn wrap-date"><!--수정건 / 클래스 추가-->
+                <div class="input-daterange" id=""><!--수정건 / 아이디 삭제-->                      
+                  <input type="text" class="eDate form-control" id="eData" name="end">
+                </div>                        
+              </div>
+              <div class="col-3 text-right account03 bt"><!--수정건 / 클래스 추가-->
+                <button type="button" class="btn-sm btn-secondary">조회</button><!--수정건 / 클래스 변경-->
+              </div>
+            </div>   
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="col-sm-12 mt-2 mb-5 d-flex table-scroll">
+        <table class="table">
+              <colgroup>
+                <col width="6%">
+                <col width="16%">
+                <col width="8%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">   
+                <col width="11%">   
+                <col width="16%">                   
+                <col width="*">
+              </colgroup>
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">No.</th>
+                  <th scope="col">신청일</th>
+                  <th scope="col">입출금</th>
+                  <th scope="col">포인트(P)</th>
+                  <th scope="col">원청징수(3.3%)</th>
+                  <th scope="col">출금수수료</th>
+                  <th scope="col">잔액(P)</th>
+                  <th scope="col">처리일</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <td scope="row" class="align-middle">11</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle">출금신청</td>
+                  <td class="align-middle">1,000,000 P</td>
+                  <td class="align-middle">33,000 P</td>
+                  <td class="align-middle">1,000 P</td>
+                  <td class="align-middle">96,832,000 P</td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle account-td-hover">
+                    <button type="button" class="btn btn-outline-secondary">대기</button>
+                    <img src="imgs/btn_setTimeClose.png" role="button">
+                  <!--x버튼 모달 -> 출금신청을 취소하시겠습니까?-->
+                  </td>
+                </tr>
+                <tr class="text-center">
+                  <td scope="row" class="align-middle">10</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle">출금</td>
+                  <td class="align-middle">3,000,000 P</td>
+                  <td class="align-middle">99,000 P</td>
+                  <td class="align-middle">1,000 P</td>
+                  <td class="align-middle">97,866,000 P</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle account-td-hover">
+                    <button type="button" class="btn btn-danger">반려</button>
+                    <!--반려 모달 -> 의심거래로 판단되어반려처리 되었습니다.-->
+                  </td>
+                </tr>
+                <tr class="text-center">
+                  <td scope="row" class="align-middle">9</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle">적립</td>
+                  <td class="align-middle">1,000 P</td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle">100,967,000 P</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle account-td-hover">
+                    <button type="button" class="btn btn-light">완료</button>
+                  </td>
+                </tr>
+                <tr class="text-center">
+                  <td scope="row" class="align-middle">8</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle">출금</td>
+                  <td class="align-middle">1,000,000 P</td>
+                  <td class="align-middle">33,000 P</td>
+                  <td class="align-middle">1,000 P</td>
+                  <td class="align-middle">100,966,000 P</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle account-td-hover">
+                    <button type="button" class="btn btn-light">완료</button>
+                  </td>
+                </tr>
+                <tr class="text-center">
+                  <td scope="row" class="align-middle">7</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle">출금</td>
+                  <td class="align-middle">20,000 P</td>
+                  <td class="align-middle">660 P</td>
+                  <td class="align-middle">1,000 P</td>
+                  <td class="align-middle">102,000,000 P</td>
+                  <td class="align-middle">2023.10.10 00:00:00</td>
+                  <td class="align-middle account-td-hover">
+                    <button type="button" class="btn btn-outline-danger">회수</button>
+                    <!--회수 모달 -> 
+                      어뷰징으로 발생된 수익임이
+                      확인되었습니다.
+                      -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <!-- 페이지네이션 / 시작 -->
+      <div class="col-12">
+        <nav aria-label="Page navigation mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">&lt;&lt;</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">&lt;</a>
+            </li>
+            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item"><a class="page-link" href="#">10</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">&gt;</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">&gt;&gt;</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- 페이지네이션 / 끝 -->
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script src="bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.ko.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+             
+    $('[data-toggle="tooltip"]').tooltip();
+    
+    //var date = new Date();
+    //date.setDate(date.getDate());
+    var date = new Date();
+    var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+    $('.input-daterange').datepicker({
+      format: "yyyy-mm-dd",
+      //startDate: date,
+      maxViewMode: 0,
+      language: "ko",
+      todayHighlight: false,
+      startView: 1,
+      disableTouchKeyboard:true,
+      //multidateSeparator: false,
+      //defaultViewDate: { year: new Date().getFullYear(), month: new Date().getMonth(), day: new Date().getDate() }
+      //defaultViewDate:	today,
+      //daysOfWeekHighlighted: [0,6],
+    });
+    $('.input-daterange input').attr("readonly",true);
+  });
+    
+  </script>
+
+
+</body>
+</html>

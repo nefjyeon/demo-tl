@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+
+  <div class="container-fluid fadeInDown my">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+      <div class="sub-title mb-5 pt-4 d-flex justify-content-end">
+        <p class="">MY > 출금/계좌관리 > 계좌관리</p>
+      </div>
+
+      <div class="form-login form-join fadeIn first col-12-padding">
+        <form action="">
+          <fieldset>
+          <div class="form-group row re mb-4">
+            <div class="making-caution col-sm-12">
+              <div>
+                <p>계좌 심사 중</p>
+              </div>
+            </div>   
+            <!--내 계좌 모달 -> 본인인증을 완료해주세요.-->  
+          </div>
+          <div class="form-group row activity-text">
+            <ul class="explanation">
+              <li class="mb-1">본인인증 또는 사업자 인증을 완료해야 추가가 가능합니다.</li>
+              <li class="mb-1">인증된 정보와 일치하는 계좌번호만 등록할 수 있습니다.</li>
+              <li>계좌번호는 1개만 등록이 가능합니다.</li>
+            </ul>
+          </div> 
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 금융기관/은행명</div>
+              <div class="col-sm-12">
+                <input type="text" id="" class="fadeIn second disabled" name="" placeholder="하나은행" disabled>
+              </div>
+              <div class="alert">
+                <p></p>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 계좌번호</div>
+              <div class="col-sm-12">
+                <input type="text" id="" class="fadeIn second disabled" name="" placeholder="110000111222" disabled>
+              </div>
+              <div class="alert">
+                <p></p>
+              </div>
+            </div>
+            <div class="btn-group form-btn-group" role="group">                
+              <button type="button" class="fadeIn btn-lg btn-secondary fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/04_my-04_withdrawal-account.html'">출금내역</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

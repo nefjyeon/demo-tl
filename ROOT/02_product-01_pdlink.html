@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!--<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar fixed-top sticky-top ">-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center"></header>
+
+  <div class="container-fluid ">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content product-panel">
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">Product > 상품링크</p>
+      </div>
+      <div class="titleCont">
+        <h2>상품링크</h2>
+      </div>
+      <!--상품 검색 영역 시작-->
+      <div class="wrap-search col-xl-12 col-xs-12 ">
+        <form action="">
+          <fieldset>
+            <div class="wrap-search-filtering d-flex pc">
+              <div class="d-flex sect">
+                <div><span>상품 검색</span></div>
+                <div class="d-flex input-flex">
+                  <input type="text" placeholder="상품코드, 상품명, 검색어를 입력하세요.">
+                  <button type="button" class="btn-search"><img src="imgs/btn_search.png" alt="검색하기"></button>
+                </div>
+              </div>
+              <div class="d-flex sect" id="accoList">
+                <div class="category-more"><span>카테고리 <i data-toggle="collapse" data-target="#accoT1" ></i></span></div>
+                <div class="category-big navbar-nav-scroll">
+                  <ul class="d-flex">
+                    <li><a href="#">유럽</a></li>
+                    <li><a href="#">동남아</a></li>
+                    <li><a href="#">일본</a></li>
+                    <li><a href="#">괌/사이판</a></li>
+                    <li><a href="#">호주/뉴질랜드</a></li>
+                    <li><a href="#">미주/하와이/중남미</a></li>
+                    <li><a href="#">홍콩/마카오/대만</a></li>
+                    <li><a href="#">중국/몽골/중앙아시아</a></li>
+                    <li><a href="#">부산/지방 출발</a></li>
+                    <li><a href="#">제주도</a></li>
+                    <li><a href="#">국내내륙/섬</a></li>
+                  </ul>
+                  <!--<div class="category-mid collapse" id="accoT1" data-parent="#accoList">-->
+                  <div class="category-mid collapse" id="accoT1">
+                    <button type="button" data-toggle="button"><span>방콕/파타야</span></button>
+                    <button type="button"><span>푸켓</span></button>
+                    <button type="button"><span>치앙마이/치앙라이</span></button>
+                    <button type="button"><span>싱가포르</span></button>
+                    <button type="button"><span>브루나이</span></button>
+                    <button type="button"><span>코타키나발루</span></button>
+                    <button type="button"><span>발리</span></button>
+                    <button type="button"><span>하노이/하롱베이/호치민</span></button>
+                    <button type="button"><span>다낭/호이안/후에</span></button>
+                    <button type="button"><span>나트랑/달랏/푸꾸옥</span></button>
+                    <button type="button"><span>베트남/캄보디아 연계</span></button>
+                    <button type="button"><span>라오스/캄보디아</span></button>
+                    <button type="button"><span>보라카이</span></button>
+                    <button type="button"><span>세부</span></button>
+                    <button type="button"><span>보홀/마닐라</span></button>
+                    <button type="button"><span>인도/네팔</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex sect">
+                <div><span>가격</span></div>
+                <div class="d-flex input-flex">
+                  <span class="input-cost"><input type="text"><i>원</i></span>
+                  <span class="hyph">~</span>
+                  <span class="input-cost"><input type="text"><i>원</i></span>
+                  <button type="button" class="btn btn-sm btn-secondary">적용</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 모바일용 상품링크 검색 필드 -->
+            <div class="wrap-search-filtering d-flex mo">
+
+              <div class="d-flex input-flex">
+                <input type="text" placeholder="상품코드, 상품명, 검색어 입력">
+                <button type="button" class="btn-search"><img src="imgs/btn_search.png" alt="검색하기"></button>
+              </div>
+              
+              <div class="d-flex">
+                <!-- 대분류 Swiper 시작 -->
+                <div class="swiper category-big-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul class="category-big-list d-flex">
+                        <li>
+                          <a href="#"><span class="cate-name">유럽</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">동남아</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">일본</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">괌/사이판</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">호주/뉴질랜드</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">미주/하와이/중남미</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">홍콩/마카오/대만</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">중국/몽골/중앙아시아</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">부산/지방 출발</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="category-big-list d-flex">
+                        <li>
+                          <a href="#"><span class="cate-name">제주도</span></a>
+                        </li>
+                        <li>
+                          <a href="#"><span class="cate-name">국내내륙/섬</span></a>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev wrap-sbtn"></div>
+                  <div class="swiper-button-next wrap-sbtn"></div>
+                </div>
+                <!-- 대분류 Swiper 끝 -->
+              </div>
+              
+              <div class="category-mid-group">
+                <div class="d-flex flex-column">
+                  <div class="d-flex category-mid-title">동남아</div>
+                  <!-- 중분류 다중선택 Swiper 시작 -->
+                  <div class="swiper category-mid-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <ul class="category-mid-list d-flex">
+                          <li>
+                            <button type="button" data-toggle="button"><span class="cate-name">방콕/파타야</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">푸켓</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">치앙마이/치앙라이</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">싱가포르</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">브루나이</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">코타키나발루</span></button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="swiper-slide">
+                        <ul class="category-mid-list d-flex">
+                          <li>
+                            <button type="button"><span class="cate-name">발리</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">하노이/하롱베이/호치민</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">다낭/호이안/후에</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">나트랑/달랏/푸꾸옥</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">베트남/캄보디아 연계</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">라오스/캄보디아</span></button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="swiper-slide">
+                        <ul class="category-mid-list d-flex">
+                          <li>
+                            <button type="button"><span class="cate-name">보라카이</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">세부</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">보홀/마닐라</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name">인도/네팔</span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name"></span></button>
+                          </li>
+                          <li>
+                            <button type="button"><span class="cate-name"></span></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev wrap-sbtn mid"></div>
+                    <div class="swiper-button-next wrap-sbtn mid"></div>
+                  </div>
+                  <!-- 중분류 다중선택 Swiper 끝 -->
+                </div>
+                <div class="d-flex input-flex">
+                  <div class="input-cost"><input type="text" placeholder="최소가격"><i>원</i></div>
+                  <span class="hyph">~</span>
+                  <div class="input-cost"><input type="text" placeholder="최대가격"><i>원</i></div>
+                  <button type="button" class="btn btn-sm btn-secondary">적용</button>
+                </div>
+              </div>
+            </div>
+            <!-- 모바일용 상품링크 검색 필드 -->
+            
+            <div class="d-flex keyword-filtering">
+              <ul class="keyword-list">
+                <li class="badge">동남아 <i></i></li>
+                <li class="badge">방콕/파타야 <i></i></li>
+                <li class="badge">싱가포르 <i></i></li>
+                <li class="badge">100,000원 ~ 1,000,000원 <i></i></li>
+                
+                <li class="badge">동남아 <i></i></li>
+                <li class="badge">동남아 <i></i></li>
+              </ul>
+              <p>
+                <button type="button" class="btn btn-sm btn-outline-secondary">초기화 <i></i></button>
+              </p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <!--상품 검색 영역 끝-->
+      <!--상품 영역 시작-->            
+      <div class="d-flex table-filtering mt-90">
+        <!-- pc용 선택지-->
+        <ul class="table-filter-select pc">
+          <!-- 선택된 .btn-tab만 .active 추가됨 -->
+          <li><button type="button" class="btn btn-tab active">인기/추천순</button></li>
+          <li><button type="button" class="btn btn-tab">마감임박순</button></li>
+          <li><button type="button" class="btn btn-tab">낮은가격순</button></li>
+          <li><button type="button" class="btn btn-tab">높은가격순</button></li>
+        </ul>
+        <!-- 모바일용 선택지-->
+        <div class="table-filter-select mo">
+          <div class="custom-control select-wrap">
+            <select name="" id="" class="custom-select custom-select-sm">
+              <option value="" selected>인기/추천순</option>
+              <option value="">마감임박순</option>
+              <option value="">낮은가격순</option>
+              <option value="">높은가격순</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div class="custom-control select-wrap">
+            <select name="" id="" class="custom-select custom-select-sm">
+              <option value="" selected>20개</option>
+              <option value="">30개</option>
+              <option value="">50개</option>
+            </select>
+          </div>
+          <!-- a.list-type에 맞게 각각 .active -->
+          <a href="02_product-01_pdlink.html" class="list-type active">
+            <img src="imgs/icon-list_block.png" alt="">
+          </a>
+          <a href="02_product-01_pdlink-type2.html" class="list-type">
+            <img src="imgs/icon-list_stack.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="row product-grid recommand">
+       
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go" onclick="location.href='http://realclick.co.kr';">상품정보<i></i></span>
+          <a class="card-wrap" href="02_product-01_pdlink-making.html">
+            <div class="card h-100">
+              <img src="imgs/goods1.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go" onclick="location.href='http://realclick.co.kr';">상품정보<i></i></span>
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <img src="imgs/goods2.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go">상품정보<i></i></span>
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light pd-deadline">마감 D-7</span>
+              <img src="imgs/goods3.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go">상품정보<i></i></span>
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light pd-deadline">마감 D-2</span>
+              <img src="imgs/goods4.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 4.0% P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go" onclick="location.href='http://realclick.co.kr';">상품정보<i></i></span>
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <img src="imgs/goods5.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go" onclick="location.href='http://realclick.co.kr';">상품정보<i></i></span>
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <img src="imgs/goods6.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go" onclick="location.href='http://realclick.co.kr';">상품정보<i></i></span>
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <img src="imgs/goods7.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <span class="badge badge-light product-go" onclick="location.href='http://realclick.co.kr';">상품정보<i></i></span>
+          <!-- 추후 적용될 광고용 상품 소스 시작 -->
+          <span class="badge badge-light pd-a-d">AD<span>｜</span><i class="bi bi-x-lg close"></i></span>
+          <!-- 추후 적용될 광고용 상품 소스 끝 -->
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <img src="imgs/goods8.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 4.0% P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+      
+      
+      <!-- 페이지네이션 / 시작 -->
+      <nav aria-label="Page navigation" class="page pc">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">&lt;&lt;</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">&lt;</a>
+          </li>
+          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">6</a></li>
+          <li class="page-item"><a class="page-link" href="#">7</a></li>
+          <li class="page-item"><a class="page-link" href="#">8</a></li>
+          <li class="page-item"><a class="page-link" href="#">9</a></li>
+          <li class="page-item"><a class="page-link" href="#">10</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">&gt;</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&gt;&gt;</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 페이지네이션 / 끝 -->
+      
+      <!-- 페이지네이션 / 시작 -->
+      <nav aria-label="Page navigation" class="page mo">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">&lt;&lt;</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">&lt;</a>
+          </li>
+          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">&gt;</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&gt;&gt;</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 페이지네이션 / 끝 -->
+      <!--상품 영역 끝-->
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      // 상품 검색 필드 카테고리 (모바일용!!) 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid-list button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

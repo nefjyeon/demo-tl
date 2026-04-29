@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center"></header>
+
+  <div class="container-fluid ">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content">
+    <!--product-panel-->
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">Product > 상품링크 > 생성</p>
+      </div>
+      <div class="titleCont">
+        <h2>상품링크 생성</h2>
+      </div>
+
+      <!--상품 영역 시작-->            
+      <!--<div class="row product-grid list list-pick">-->
+      <div class="row product-grid list list-pick">
+       
+        <!-- 상품링크에서 선택한 상품 한눈에 보기 시작 -->
+        <div class="product-wrap col-sm-12 mb-3 d-flex align-items-stretch">
+          <a class="card-wrap" href="http://naver.com/">
+            <div class="card h-100">
+              <img src="imgs/goods1.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <div class="label-group d-flex flex-row">
+                  <div class="saving-point d-flex justify-content-center align-items-center">
+                    최대 <strong>+ 10,000 P</strong>
+                  </div>
+                </div>
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="card-term">출발기간 : 2023.01.01 ~ 2023.12.31</p>
+                <p class="card-text-long">
+                  <!-- 해당 영역은 p.card-text-long 클래스를 늘 유지하고
+                  글자 내용만 있고 없는 차이임-->
+                  NO쇼핑, 노랑풍선단독, 베스트셀러<br>
+                  #배틀트립 #누사두아 위치 #발리 전통 분위기<br>
+                  #누사페니다 섬투어 포함 #TITI클럽 런치 제공 #짐바란 씨푸드 제공<br>
+                  #마사지 2회 포함 #400,000 루피아 밀크레딧 제공<br>
+                  <!-- 해당 영역은 p.card-text-long 클래스를 늘 유지하고
+                  글자 내용만 있고 없는 차이임-->
+                </p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+            </div>
+          </a>
+          <div class="card-button-group">
+            <span class="badge badge-light product-go" onclick="location.href='http://naver.com';">상품정보<i></i></span>
+          </div>
+        </div>
+        <!-- 상품링크에서 선택한 상품 한눈에 보기 끝 -->
+        
+        <div class="making-caution col-sm-12 mb-3">
+          <div>
+            반드시 아래와 같은 문구를 삽입해주세요.
+            <p>“이 게시물은 트립링크에서 제공받은 상품을 소개하였으며 활동에 따른 소정의 수수료를 제공받습니다.”</p>
+          </div>
+        </div>
+        
+        <div class="making-wrap col-sm-12">
+          <form action="">
+            <fieldset class="col-sm-12 mb-3 d-flex align-items-stretch">
+
+              <!--<div class="preview-wrap col-sm-12 col-md-6 col-lg-3 mb-5 ">-->
+              <div class="preview-wrap col-sm-12 col-md-6 col-lg-3 ">
+                <p class="making-title">미리보기</p>
+                <div class="preview">
+                  <!--화면내용~~~-->
+                  <div class="product-wrap d-flex align-items-stretch">
+                    <a class="card-wrap" href="">
+                      <div class="card h-100">
+                        <img src="imgs/goods1.jpg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                          <!-- h5 요소와 그 하위 요소까지 변경사항 있습니다. -->
+                          <h5 class="card-title brand">
+                            <span class="brand-symbol"><img src="http://dev-www.triplink.kr/assets/images/common/logo_yellowBsymb.png" alt=""></span>
+                            <span class="brand-title">[발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</span>
+                          </h5>
+                          <p class="card-text">해외패키지 &gt; 동남아 &gt; 발리</p>
+                          <p class="product-price">1,000,000 원 ~</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="making-code">
+                <ul>
+                  <li class="d-flex">
+                    <div class="making-title">단축 URL</div>
+                    <div class="copy-wrap">
+                      <textarea name="" id="">https://aaa.triplink.com/a/bfjt4B</textarea>
+                      <button type="button" class="btn">복사</button>
+                    </div>
+                  </li>
+                  
+                  <li class="d-flex">
+                    <div class="making-title">일반태그</div>
+                    <div class="copy-wrap">
+                      <textarea name="" id=""><iframe src="https://aaa.triplink.com/a/bfjt4B
+" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe></textarea>
+                      <button type="button" class="btn">복사</button>
+                    </div>
+                  </li>
+                  
+                  <li class="d-flex">
+                    <div class="making-title">블로그용 태그</div>
+                    <div class="copy-wrap">
+                      <textarea name="" id=""><a href="https://aaa.triplink.com/a/bfjt4B
+" target="_blank" referrerpolicy="unsafe-url"><img src="https://aaa.triplink.com/a/bfjt4B
+/image/affiliate/banner/373579f1c1e35b41347293ecab0ad85d@2x.jpg" alt="[발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별룸서비스 " width="120" height="240"></a></textarea>
+                      <button type="button" class="btn">복사</button>
+                    </div>
+                  </li>
+                </ul>
+                
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+        
+      </div>
+      
+      
+
+      <!--상품 영역 끝-->
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      // 상품 검색 필드 카테고리 (모바일용!!) 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid-list button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

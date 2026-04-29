@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 회원가입</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+
+  <div class="container-fluid fadeInDown my">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+      <div class="sub-title pt-4 d-flex justify-content-end">
+        <p class="">MY > 내정보</p>
+      </div>
+      <div class="titleCont basic">
+        <h2>내정보</h2>
+      </div>
+      <div class="">
+        <ul class="">          
+          <li class="basic-info mb-3">
+              <div class="basic-info-title mb-3 col-sm-10 code-in2 basic-title1">
+                <p>기본정보</p>
+              </div>
+              <div class="in-basic-info col-sm-11 row d-flex justify-content-center">
+                <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                  <div class="d-inline-block col-sm-1 col-2">
+                      <!-- case 1 -->
+                      <img src="imgs/icon_error_2.png">
+                      <!-- case 2 (주석처리) - 인증완료시 이미지 변경-->
+                      <!-- <img src="imgs/icon-pesron.png"> -->
+                      <!-- <i></i> -->
+                  </div>
+                  <div class="d-inline-block col-6 col-sm-6">
+                    <div class="d-inline-block py-3 bacsic-text">
+                      <p>실명인증을 해주세요.</p>
+                      <p>hhj@realclick.co.kr</p>
+                    </div>
+                  </div>
+                  <div class="d-inline-block col-5 col-sm-5 d-flex">
+                    <!-- case 1 -->
+                    <button type="button" class="btn">실명인증</button>
+                    <!-- case 2 (주석처리) - 인증완료시 -->
+                    <!-- 실명인증 btn -> 인증완료 -->                    
+                  </div>
+              </div>
+            </div>
+            <div class="in-basic-info2 col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center border-top mt-1 code-in">
+                <div class="d-inline-block col-sm-1 mt-3 col-2">
+                    <i></i>
+                </div>
+                <div class="d-inline-block col-6 col-sm-6">
+                  <div class="d-inline-block py-3 bacsic-text">
+                    <p>010-****-1142</p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block col-sm-1 col-2 in-basic-info2-letter">
+                    <i></i>
+                </div>
+                <div class="d-inline-block col-6 col-sm-6">
+                  <div class="d-inline-block bacsic-text">
+                    <p>이벤트/광고성 혜택 안내 수신동의</p>
+                    <p class="pt-2">메일 : 동의 | 문자 : 동의안함</p>
+                  </div>
+                </div>
+                <div class="d-inline-block col-4 col-sm-5 d-flex">
+                  <button type="button" class="btn" onclick="location.href='https://design.realclick.co.kr/triplink-dash/04_my-02_info.html'">수정</button>                    
+                </div>
+              </div>
+            </div>          
+          </li>
+          <li class="basic-info mb-3">
+            <div class="mb-3 col-sm-10 code-in2 basic-title">
+              <p>추천인 ID<span>AF7089593</span></p>
+            </div>
+            <div class="in-basic-info col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block px-0 col-8 col-sm-8">
+                    <div class="col-sm-12 code-in recommender">
+                      <input type="text" id="Real-name" class="fadeIn third disabled" name="Real-name" placeholder="http://{파트너스URL}...../AF7089593" disabled>
+                    </div>
+                </div>
+                <div class="d-inline-block col-5 col-sm-3 d-flex">
+                  <button type="button" class="btn">복사</button>                    
+                </div>
+            </div>
+          </div>       
+          </li>
+          <li class="basic-info mb-3">
+            <div class="mb-3 col-sm-10 code-in2 basic-title">
+              <p>활동사이트/앱</p>
+            </div>
+            <div class="in-basic-info2 col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block col-6 col-sm-6 code-in">
+                  <div class="d-inline-block bacsic-text">
+                    <p>활동사이트나 앱을 등록하여 활동해주세요.</p>
+                  </div>
+                </div>
+                <div class="d-inline-block col-7 col-sm-5 d-flex">
+                  <button type="button" class="btn">활동사이트/앱 등록</button>                    
+                </div>
+            </div>
+          </div>    
+          </li>
+          <li class="basic-info mb-3">
+            <div class="mb-3 col-sm-10 code-in2 basic-title">
+              <p>실명인증</p>
+            </div>
+            <div class="in-basic-info2 col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block col-8 col-sm-6 code-in">
+                  <div class="d-inline-block bacsic-text">
+                    <p>출금 신청 시 소득세 신고를 위해 필요합니다.</p>
+                  </div>
+                </div>
+                <div class="d-inline-block col-5 col-sm-5 d-flex">
+                  <button type="button" class="btn">실명인증</button>                    
+                </div>
+            </div>
+          </div>    
+          </li>
+          <li class="basic-info mb-3">
+            <div class="mb-3 col-sm-10 code-in2 basic-title">
+              <p>출금/계좌관리</p>
+            </div>
+            <div class="in-basic-info2 col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block col-7 col-sm-6 code-in">
+                  <div class="d-inline-block bacsic-text">
+                    <p>계좌번호를 입력해야 출금신청이 가능합니다.<br>
+                      본인소유의 계좌번호를 입력하세요.</p>
+                  </div>
+                </div>
+                <div class="d-inline-block col-6 col-sm-5 d-flex">
+                  <button type="button" class="btn">출금/계좌관리</button>                    
+                </div>
+            </div>
+          </div>    
+          </li>
+          <li class="basic-info mb-3">
+            <div class="mb-3 col-sm-10 code-in2 basic-title">
+              <p>로그인기록</p>
+            </div>
+            <div class="in-basic-info2 col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block col-8 col-sm-6 code-in">
+                  <div class="d-inline-block bacsic-text">
+                    <p>로그인기록을 확인할 수 있습니다.</p>
+                  </div>
+                </div>
+                <div class="d-inline-block col-5 col-sm-5 d-flex">
+                  <button type="button" class="btn">로그인기록</button>                    
+                </div>
+            </div>
+          </div>    
+          </li>
+          <li class="basic-info mb-3">
+            <div class="mb-3 col-sm-10 code-in2 basic-title">
+              <p>1:1 문의</p>
+            </div>
+            <div class="in-basic-info2 col-sm-11 row d-flex justify-content-center">
+              <div class="col-sm-11 col-12 d-flex align-items-center code-in">
+                <div class="d-inline-block col-3 col-sm-3 code-in">
+                  <div class="d-inline-block bacsic-text">
+                    <p>문의 : <a href="">1건</a></p>
+                  </div>
+                </div>
+                <div class=" position-relative bacsic-text">
+                 답변 : 1건
+                  <span class="position-absolute top-0 start-100 translate-middle p-1 badge bg-danger border border-light rounded-circle">
+                  </span>
+                </div>
+                <!-- <button type="button" class="btn position-relative">
+                  답변 : 1건
+                  <span class="position-absolute top-0 start-100 p-2 translate-middle badge rounded-circle bg-danger">
+                  </span>
+                </button> -->
+                <!-- <div class="d-inline-block col-4 col-sm-3 d-flex bacsic-text">
+                  <p>답변 : 1건</p>                 
+                </div> -->
+            </div>
+          </div>    
+          </li>
+        </ul>
+      </div>
+    </main>    
+  </div>
+  
+  
+  <!--<div id="terms1modal" class="modal fade" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+  
+
+    
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      //slidesPerView: 1,
+      //spaceBetween: 10,
+      //direction: 'vertical',
+      loop: true,
+      loopAdditionalSlides : 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      /*pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween:0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+/*        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },*/
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 38,
+        },
+        /*1400: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },*/
+      },
+    });
+    
+    $(document).ready(function() {
+      
+      // 대시보드 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".filtering-tag>ul>li").on("click", function(){
+        $.this = this;
+        $(".filtering-tag>ul>li").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+      
+      // 약관 동의 전체 체크 기능
+      $("#alltermsOk").click(function() {
+				if($("#alltermsOk").is(":checked")) $("input[name=allterms]").prop("checked", true);
+				else $("input[name=allterms]").prop("checked", false);
+			});
+			
+			$("input[name=allterms]").click(function() {
+				var total = $("input[name=allterms]").length;
+				var checked = $("input[name=allterms]:checked").length;
+				
+				if(total != checked) $("#alltermsOk").prop("checked", false);
+				else $("#alltermsOk").prop("checked", true); 
+			});
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!--<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar fixed-top sticky-top ">-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+    <!--<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"></header>-->
+  <!--<div class="wrapper container-fluid">-->
+  <div class="container-fluid fadeInDown">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content">
+      
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">Help Center > 공지사항</p>
+      </div>
+      <div class="titleCont">
+        <h2>공지사항</h2>
+      </div>
+      <!-- 공지사항 영역 시작 -->
+      <div class="wrap-helpcenter col-xl-12 col-xs-12 col-12">
+
+        <!--<div class="d-flex col-sm-12 col-12">
+          <button class="d-flex col-12 mb-4 col-sm-7 activity-box" onclick="location.href='02_product-02_dynamic-making.html'">
+            <div class="activity col-sm-12 d-flex justify-content-center align-items-center">
+              <i></i><span class="mx-2">배너 만들기</span>
+            </div>                
+          </button>                
+        </div>-->
+        <form action="">
+          <fieldset>               
+            <div class="d-flex row col-sm-12 table-filtering-field">
+              <div class="col col-sm-1 col-md-1 custom-control">
+                <select name="" id="" class="custom-select custom-select-sm">
+                  <option value="" selected>전체</option>
+                  <option value="">공지</option>
+                  <option value="">가이드</option>
+                  <option value="">이벤트</option>
+                </select>
+              </div>
+              <div class="col col-sm-8 col-md-6 col-lg-4">
+                <div class="d-flex input-flex">
+                  <input type="text" placeholder="제목, 내용 검색">
+                  <button type="button" class="btn-search"><img src="imgs/btn_search.png" alt="검색하기"></button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+            
+        <div class="col-sm-12 mt-4 mb-5 d-flex table-scroll">
+          <table class="table dynamic noti">
+            <colgroup>
+              <col width="12%">
+              <col width="10%">
+              <col width="56.5%">
+              <col width="*">
+            </colgroup>
+            <thead>
+              <tr class="text-center">
+                <th scope="col">No.</th>
+                <th scope="col">말머리</th>
+                <th scope="col">제목</th>
+                <th scope="col">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
+                <td scope="row" class="align-middle"><img src="imgs/icon-exclamation-red.png" alt=""></td>
+                <td class="align-middle">공지</td>
+                <td class="align-middle"><div><a href="05_helpcenter-01_notice-view.html">주요약관위반 안내</a></div></td>
+                <td class="align-middle">2023.10.10</td>
+              </tr>
+              <tr class="text-center">
+                <td scope="row" class="align-middle"><img src="imgs/icon-exclamation-red.png" alt=""></td>
+                <td class="align-middle">가이드</td>
+                <td class="align-middle"><div><a href="05_helpcenter-01_notice-view.html">채널아이디 안내</a></div></td>
+                <td class="align-middle">2023.10.10</td>
+              </tr>
+              <tr class="text-center">
+                <td scope="row" class="align-middle">100</td>
+                <td class="align-middle">공지</td>
+                <td class="align-middle"><div><a href="05_helpcenter-01_notice-view.html">주요약관위반 안내</a></div></td>
+                <td class="align-middle">2023.10.10</td>
+              </tr>
+              <tr class="text-center">
+                <td scope="row" class="align-middle">99</td>
+                <td class="align-middle">공지</td>
+                <td class="align-middle"><div><a href="05_helpcenter-01_notice-view.html">서비스 점검</a></div></td>
+                <td class="align-middle">2023.10.10</td>
+              </tr>
+              <tr class="text-center">
+                <td scope="row" class="align-middle">98</td>
+                <td class="align-middle">이벤트</td>
+                <td class="align-middle"><div><a href="05_helpcenter-01_notice-view.html">추천인 추가 인센티브 연장</a></div></td>
+                <td class="align-middle">2023.10.10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 페이지네이션 / 시작 -->
+        <div class="col-12">
+          <nav aria-label="Page navigation mt-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">&lt;&lt;</a>
+              </li>
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">&lt;</a>
+              </li>
+              <li class="page-item"><a class="page-link active" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">&gt;</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">&gt;&gt;</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- 페이지네이션 / 끝 -->
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

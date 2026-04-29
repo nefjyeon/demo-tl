@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+
+  <div class="container-fluid fadeInDown my">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+      <div class="sub-title pt-4 d-flex justify-content-end">
+        <p class="">MY > 실명인증 > 사업자신청</p>
+      </div>
+
+      <div class="form-login form-join fadeIn first">
+        <form action="">
+          <fieldset>              
+            <div class="form-group row">
+              <div class="titleCont business mb-2">
+                <h3>기본 정보</h3>
+              </div>
+              <div class="col-sm-12 title-formin">* 이메일</div>
+              <div class="col-sm-12">
+                <input type="text" id="id" class="fadeIn second disabled" name="id" placeholder="hhj@realclick.co.kr" disabled>
+              </div>
+            </div>              
+            <div class="form-group row activity-text">
+              <div class="col-sm-12 title-formin">* 휴대폰번호</div>
+              <div class="col-sm-12 input-group">
+                <input type="text" class="disabled" placeholder="010-2078-1142" aria-label="" aria-describedby="button-addon1" disabled>
+              </div>
+            </div>
+          </fieldset>           
+        </form>
+      </div>
+
+      <div class="form-login form-join fadeIn first join-border-top mt-3">
+        <form action="">
+          <fieldset>              
+            <div class="form-group row business mt-2">
+              <div class="titleCont business mb-2">
+                <h3>사업자 정보</h3>
+                <!-- <h1><img src="imgs/logo-bl.png" alt=""></h1> -->
+              </div>
+              <div class="making-caution col-sm-12">
+                <div>
+                  <p>사업자 정보 수정은 고객센터로 문의하시면 처리 가능합니다.</p>
+                </div>
+              </div>   
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 사업자 유형</div>
+              <div class="col-sm-12 d-flex justify-content-start category">
+                <div class="form-check d-inline-block">
+                  <input class="form-check-input category" type="radio" name="flexRadioDefault" id="flexRadioDefault1" disabled>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    개인사업자
+                  </label>
+                </div>
+                <div class="form-check d-inline-block mx-2">
+                  <input class="form-check-input category" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked disabled>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    법인사업자
+                  </label>
+                </div>
+              </div>
+            </div>    
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 사업자명</div>
+              <div class="col-sm-12">
+                <input type="text" class="fadeIn third disabled" name="business-name" placeholder="삼성전자 주식회사" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 사업자번호</div>
+              <div class="col-sm-12">
+                <input type="text" class="fadeIn third disabled" name="business-number" placeholder="000-00-00000" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 업종</div>
+              <div class="col-sm-12">
+                <input type="text" class="fadeIn third disabled" name="sectors" placeholder="제조업" disabled>
+              </div>
+            </div>
+            <div class="address-mobile">
+              <div class="form-group row">
+                <div class="col-sm-12 my-3 d-flex ">
+                  <p>기본주소</p>
+                </div>
+                <div class="col-sm-12 d-flex align-items-center mb-2 custom-control custom-checkbox address">
+                  <div class="">
+                    <input type="checkbox" class="custom-control-input" id="terms7" name="address_mo" onclick='toggleTextbox(this)'/>
+                    <label class="custom-control-label" for="terms7" >주소검색 없이 직접입력</label>
+                  </div>                    
+                  <div class="account05 mx-2">
+                    <button type="button" class="btn btn-primary" 
+                    onclick="execDaumPostcode()">주소찾기</button>
+                  </div>
+                </div>    
+                <div class="col-3 col-sm-3 account04">
+                  <input type="text" id="chk_address3" class="fadeIn third disabled" name="business-address-mo" placeholder="00000" disabled/>
+                </div>
+                <div class="col-9 col-sm-9 account02">
+                  <input type="text" id="chk_address4" class="fadeIn third disabled" name="business-address2-mo" placeholder="서울특별시 종로구 청와대로 1" disabled/>
+                </div>
+                <div class="col-sm-12 my-3 d-flex">
+                  <p>상세주소</p>
+                </div>
+                <div class="col-sm-12">
+                  <input type="text" id="" class="fadeIn third disabled" name="" placeholder="리얼클릭빌딩 2층" disabled>
+                </div>   
+              </div>
+            </div>
+            <div class="address-web">
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-12 title-formin">* 사업자주소</div>                     
+                  <div class="col-sm-12 my-3 d-flex">
+                    <p>기본주소</p>
+                  </div>
+                  <div class="col-sm-12 d-flex mb-2 custom-control custom-checkbox address">
+                    <input type="checkbox" class="custom-control-input" id="terms6" name="address" disabled onclick='toggleTextbox(this)'/>
+                    <label class="custom-control-label" for="terms6" >주소검색 없이 직접입력</label>
+                  </div>
+                  <div class="col-sm-12 d-flex ">
+                    <div class="col-3 col-md-3 col-lg-3 account04">
+                      <input type="text" id="chk_address" class="fadeIn third disabled" name="business-address" placeholder="00000" disabled/>
+                    </div>
+                    <div class="col-5 col-md-6 col-lg-7 account02">
+                      <input type="text" id="chk_address2" class="fadeIn third disabled" name="business-address2" placeholder="서울특별시 종로구 청와대로 1" disabled/>
+                    </div>        
+                    <div class="col-2 col-md-3 col-lg-2 account04">
+                      <button type="button" class="btn btn-primary" 
+                      onclick="execDaumPostcode()" >주소찾기</button>
+                    </div>
+                  </div>
+                <div class="col-sm-12 my-3 d-flex">
+                  <p>상세주소</p>
+                </div>
+                <div class="col-sm-12">
+                  <input type="text" id="" class="fadeIn third disabled" name="" placeholder="리얼클릭빌딩 2층" disabled>
+                </div>     
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 사업자등록증 첨부</div>
+              <div class="col-sm-12 d-flex justify-content-end mb-1 file">
+                <p>10MB 이하 파일</p>
+              </div>
+              <div class="col-sm-12 my-file fourth disabled">
+                <input type="file" class="custom-file-input disabled" id="fileSelect" name="file-business " accept=".pptx,.hwp,.jpg,.png" disabled>
+                <label class="custom-file-label selected disabled" for="fileSelect" disabled>사업자등록증 사본.pdf</label>
+                <!-- <label class="custom-file-label form-control selected" for="fileSelect" placeholder="파일을 마우스로 끌어오세요."></label> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 세금계산서 이메일</div>
+              <div class="col-sm-12">
+                <input type="text" class="fadeIn third disabled" name="tax-invoice-email" placeholder="bill@samsung.com" disabled>
+              </div>
+            </div>
+
+          </fieldset>  
+        </form>
+      </div>
+      <div class="form-login form-join fadeIn first join-border-top mt-3">
+        <form action="">
+          <fieldset>       
+            <div class="form-group row">
+              <div class="titleCont business mb-2">
+                <h3>대표자 정보</h3>
+              </div>
+              <div class="col-sm-12 d-flex mb-2 align-items-center">
+                <div class="col-sm-3 d-inline-block px-0 business-text title-formin">* 대표자명</div>
+                <div class="col-sm-9 d-flex justify-content-end custom-control custom-checkbox address account04">
+                  <input type="checkbox" class="custom-control-input" id="terms9" name="same-ck" disabled>
+                      <label class="custom-control-label" for="terms9">기본회원 정보와 동일</label>
+                </div>
+              </div>              
+              <div class="col-sm-12">
+                <input type="text" id="id" class="fadeIn second disabled" name="" placeholder="노태문" disabled>
+              </div>
+              <div class="col-sm-12 title-formin">* 대표자 이메일</div>
+              <div class="col-sm-12">
+                <input type="password" id="pw" class="fadeIn third disabled" name="" placeholder="moon@samsung.com" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 대표자 전화번호</div>
+              <div class="col-sm-12">
+                <input type="text" id="yourname" class="fadeIn third disabled" name="" placeholder="1566-1111" disabled>
+              </div>
+            </div>
+          </fieldset>  
+        </form>
+      </div>
+      <div class="form-login form-join fadeIn first join-border-top mt-3">
+        <form action="">
+          <fieldset>       
+            <div class="form-group row">
+              <div class="titleCont business mb-2">
+                <h3>담당자 정보</h3>
+              </div>
+              <div class="col-sm-12 d-flex mb-2 align-items-center">
+                <div class="col-sm-3 d-inline-block px-0 business-text title-formin">* 담당자명</div>
+                <div class="col-sm-9 d-flex justify-content-end custom-control custom-checkbox address account04">
+                  <input type="checkbox" class="custom-control-input" id="terms8" name="same-ck2" disabled>
+                      <label class="custom-control-label" for="terms8">대표자와 동일</label>
+                </div>
+              </div>              
+              <div class="col-sm-12">
+                <input type="text" id="" class="fadeIn second disabled" name="contact" placeholder="이재용" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 담당자 직급</div>
+              <div class="col-sm-12">
+                <input type="text" id="" class="fadeIn third disabled" name="contact-rank" placeholder="회장" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 담당자 이메일</div>
+              <div class="col-sm-12">
+                <input type="text" id="yourname" class="fadeIn third disabled" name="contact-email" placeholder="dragon@samsung.com" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 담당자 전화번호</div>
+              <div class="col-sm-12">
+                <input type="text" id="yourname" class="fadeIn third disabled" name="contact-phone" placeholder="02-1234-5678" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 기타 파일첨부</div>
+              <div class="col-sm-12 d-flex justify-content-end mb-1 file">
+                <p>10MB 이하 파일</p>
+              </div>
+              <div class="col-sm-12 my-file third disabled">
+                <input type="file" class="custom-file-input disabled" id="fileSelect" name="file-etc" accept=".pptx,.hwp,.jpg,.png" disabled>
+                <label class="custom-file-label selected disabled" for="fileSelect" disabled>SK텔레콤 추가 증빙서류 사본.pdf</label>
+                <!-- <label class="custom-file-label form-control selected" for="fileSelect" placeholder="파일을 마우스로 끌어오세요."></label> -->
+              </div>
+            </div>
+            <div class="btn-group form-btn-group" role="group">                
+              <button type="button" class="fadeIn btn-lg btn-secondary fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/04_my-03_authentication-complete-buisness.html'">이전</button>
+            </div>
+          </fieldset>  
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="modal fade" id="save-btn" tabindex="-1" aria-labelledby="save-btn" aria-hidden="true">
+    <div class="modal-dialog withdrawal-modal">
+      <div class="modal-content withdrawal-modal">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title">회원탈퇴신청</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>저장하였습니다.<br>
+            담당자의 심사 후 적용됩니다.</p>
+        </div>
+        <div class="modal-footer">          
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    
+
+  </script>
+
+
+</body>
+</html>

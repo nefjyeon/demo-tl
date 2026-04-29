@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<title>TripLink 비밀번호 재설정</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!--<header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>-->
+
+  <!--<div class="wrapper container-fluid">-->
+  <div class="container-fluid fadeInDown">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel findform-panel">
+
+      <div class="titleCont">
+        <h1><img src="imgs/logo-bl.png" alt=""></h1>
+        <h2>비밀번호 재설정</h2>
+      </div>
+      <div class="form-login form-join fadeIn first">
+        <form action="">
+          <fieldset>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">새 비밀번호를 입력하세요.</div>
+              <div class="col-sm-12">
+                <input type="password" id="pw" class="fadeIn" name="pw" placeholder="비밀번호 입력">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <input type="password" id="pwr" class="fadeIn" name="pwr" placeholder="비밀번호 확인">
+              </div>
+              <div class="alert">
+                <!-- case 1 -->
+                <p><i></i>비밀번호를 입력하세요.</p>
+                <!-- case 2 (주석처리) -->
+                <!--<p><i></i>비밀번호는 영문, 숫자를 포함하여 6~20자리 이하로 입력해 주세요.</p>-->
+                <!-- case 3 (주석처리) -->
+                <!--<p><i></i>비밀번호가 일치하지 않습니다.</p>-->
+                <!-- case 4 (주석처리 / 4번 케이스만 파란 글자) -->
+                <!--<p class="alert-blue"><i></i>사용가능한 비밀번호입니다.</p>-->
+              </div>
+            </div>
+
+
+            <div class="btn-group find-btn-group" role="group">
+              <button type="button" class="fadeIn btn-outline-secondary btn-lg third" onclick="location.href='https://design.realclick.co.kr/triplink-dash/00_login.html'">취소</button>
+              <button type="button" class="fadeIn btn-lg btn-secondary third" data-toggle="modal" data-target="#resetpw" >저장</button>
+              <!--
+                저장 완료 모달 뜬 후
+  onclick="location.href='https://design.realclick.co.kr/triplink-dash/00_login.html'"
+                로그인 화면 이동
+              -->
+            </div>
+          </fieldset>
+        </form>
+      </div>    
+    </main>
+    
+  </div>
+  
+  
+  
+  <!-- 비밀번호 재설정 확인 모달 : 시작 -->
+  <div class="modal fade" id="resetpw" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="findeEmailLabel" aria-hidden="true">
+    <div class="modal-dialog msgDialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- case 1 메시지-->
+          <p>새 비밀번호가 저장되었습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 비밀번호 재설정 확인 모달 : 끝 -->
+    
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      //slidesPerView: 1,
+      //spaceBetween: 10,
+      //direction: 'vertical',
+      loop: true,
+      loopAdditionalSlides : 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      /*pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween:0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+/*        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },*/
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 38,
+        },
+        /*1400: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },*/
+      },
+    });
+    
+    $(document).ready(function() {
+      
+      // 대시보드 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".filtering-tag>ul>li").on("click", function(){
+        $.this = this;
+        $(".filtering-tag>ul>li").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+      
+      // 약관 동의 전체 체크 기능
+      $("#alltermsOk").click(function() {
+				if($("#alltermsOk").is(":checked")) $("input[name=allterms]").prop("checked", true);
+				else $("input[name=allterms]").prop("checked", false);
+			});
+			
+			$("input[name=allterms]").click(function() {
+				var total = $("input[name=allterms]").length;
+				var checked = $("input[name=allterms]:checked").length;
+				
+				if(total != checked) $("#alltermsOk").prop("checked", false);
+				else $("#alltermsOk").prop("checked", true); 
+			});
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

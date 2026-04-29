@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 회원가입</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+
+  <div class="container-fluid fadeInDown my">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+      <div class="sub-title pt-4 d-flex justify-content-end">
+        <p class="">MY > 내정보 관리 > 내정보 관리</p>
+      </div>
+      <div class="titleCont">
+        <h2>MY</h2>
+      </div>
+      <div class="form-login form-join fadeIn first col-12-padding">
+        <form action="">
+          <fieldset>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 이메일</div>
+              <div class="col-sm-12">
+                <input type="text" id="id" class="fadeIn second disabled" name="id" placeholder="hhj@realclick.co.kr" disabled>
+              </div>
+              <div class="alert">
+                <p></p>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 비밀번호 재설정</div>
+              <div class="col-sm-12">
+                <input type="password" id="pw" class="fadeIn third" name="pw" placeholder="새 비밀번호 입력">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <input type="password" id="pwr" class="fadeIn third" name="pwr" placeholder="새 비밀번호 확인">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 이름(별명)</div>
+              <div class="col-sm-12">
+                <input type="text" id="yourname" class="fadeIn third" name="yourname" placeholder="맹구">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 휴대폰번호</div>
+              <div class="col-sm-12 input-group">
+                <input type="text" class="form-control" placeholder="010-2078-1142" aria-label="" aria-describedby="button-addon1">
+                <div class="input-group-append">
+                  <button class="btn-md btn-formin" type="button" id="button-addon1">인증번호 발송</button>
+                  <!--<button class="btn-md btn-formin" type="button" id="button-addon1">재발송</button>-->
+                </div>
+              </div>
+              <!--<div class="col-sm-12">
+                <input type="text" id="sms1" class="fadeIn third" name="sms1" placeholder="휴대폰번호 입력(숫자만)">
+                <button>인증번호 발송</button>
+                <button>재발송</button>
+              </div>-->
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 input-group">
+                <input type="text" class="form-control" placeholder="인증번호 입력" aria-label="인증번호 입력" aria-describedby="button-addon2">
+                <!--veriCode는 인증 시에만 나타남 display:flex; 사용됨 -->
+                <div class="veriCode"><i>03:00</i></div>
+                <div class="input-group-append">
+                  <button class="btn-md btn-formin" type="button" id="button-addon2">인증하기</button>
+                  <!--<button class="btn-md btn-formin" type="button" id="button-addon1">인증완료</button>-->
+                </div>
+              </div>
+              <div class="alert">
+                <!-- case 1 -->
+                <p><i></i>SMS를 발송하였습니다. 인증번호를 입력하세요.</p>
+                <!-- case 2 (주석처리) -->
+                <!--<p><i></i>이미 가입된 휴대폰번호 입니다.</p>-->
+                <!-- case 3 (주석처리) -->
+                <!--<p><i></i>인증번호가 잘못되었습니다.</p>-->
+                <!-- case 4 (주석처리) -->
+                <!--<p><i></i>인증시간이 초과 되었습니다.</p>-->
+                <!-- case 5 (주석처리 / 5번 케이스만 파란 글자) -->
+                <!--<p class="alert-blue"><i></i>인증이 완료되었습니다.</p>-->
+              </div>
+            </div>
+            <div class="form-group row recomand">
+              <div class="col-sm-12 title-formin">* 추천인코드</div>
+              <div class="col-sm-12">
+                <input type="text" id="recomand-people" class="fadeIn third disabled" name="recomand-people" placeholder="AA1234567" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 실명</div>
+              <div class="col-sm-12">
+                <input type="text" id="Real-name" class="fadeIn third disabled" name="Real-name" placeholder="실명인증을 해주세요." disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xs-12 col-sm-12 title-formin">* 내 계좌</div>
+              <div class="col-3 col-sm-3 account04">
+                <input type="text" id="" class="fadeIn third disabled" name="" placeholder="미설정" disabled>
+              </div>
+              <div class="col-9 col-sm-9 account02">
+                <input type="text" id="" class="fadeIn third disabled" name="" placeholder="계좌정보를 입력하세요." disabled>
+              </div>
+              <div class="alert account">
+                <p>내 계좌 관리에서 계좌정보 변경이 가능합니다.</p>
+              </div>
+            </div>
+            <div class="form-group row terms-group-chk">
+              <div class="col-sm-12 title-formin">* 약관 동의</div>
+              <div class="col-sm-12 terms-group-chkWrap">
+                <!--<input type="text" id="sms1" class="fadeIn third" name="sms1" placeholder="휴대폰번호 입력(숫자만)">-->
+                <div class="col-sm-12 inner">                  
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="terms4" name="allterms">
+                    <label class="custom-control-label" for="terms4">이벤트 및 광고성 안내메일 수신에 동의합니다. (선택)</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="terms5" name="allterms">
+                    <label class="custom-control-label" for="terms5">이벤트 및 광고성 안내문자 수신에 동의합니다. (선택)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="title-withdrawal" data-toggle="modal" data-target="#withdrawal-btn">
+                <p>* 회원탈퇴</p>
+              </div>
+            </div>
+            <!--<input type="submit" class="fadeIn fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/01_home.html'" value="이메일로 로그인">-->
+            <div class="btn-group form-btn-group" role="group">
+              <button type="button" class="fadeIn btn-outline-secondary btn-lg fourth" onclick="location.href=''">취소</button>
+              <button type="button" class="fadeIn btn-lg btn-secondary fourth" onclick="location.href=''">저장</button>
+            </div>
+            <!-- <div class="title-withdrawal">
+              <p>* 회원탈퇴</p>
+            </div> -->
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </div>
+  <!-- 회원탈퇴 모달 1-->
+  <div class="modal fade" id="withdrawal-btn" tabindex="-1" aria-labelledby="withdrawal-btn" aria-hidden="true">
+    <div class="modal-dialog withdrawal-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">회원탈퇴신청</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>회원탈퇴 신청을 하시겠습니까?<br>
+            탈퇴 시 보유수익과 모든 데이터는<br>
+            복구가 불가능합니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#withdrawal-btn2">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 회원탈퇴 모달 2-->
+  <div class="modal fade" id="withdrawal-btn2" tabindex="-1" aria-labelledby="withdrawal-btn" aria-hidden="true">
+    <div class="modal-dialog withdrawal-modal two">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">회원탈퇴신청</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>탈퇴신청이 접수 되었습니다.<br>
+            담당자의 확인 후 처리예정입니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+      
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      //slidesPerView: 1,
+      //spaceBetween: 10,
+      //direction: 'vertical',
+      loop: true,
+      loopAdditionalSlides : 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      /*pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween:0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+/*        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },*/
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 38,
+        },
+        /*1400: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },*/
+      },
+    });
+    
+    $(document).ready(function() {
+      
+      // 대시보드 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".filtering-tag>ul>li").on("click", function(){
+        $.this = this;
+        $(".filtering-tag>ul>li").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+      
+      // 약관 동의 전체 체크 기능
+      $("#alltermsOk").click(function() {
+				if($("#alltermsOk").is(":checked")) $("input[name=allterms]").prop("checked", true);
+				else $("input[name=allterms]").prop("checked", false);
+			});
+			
+			$("input[name=allterms]").click(function() {
+				var total = $("input[name=allterms]").length;
+				var checked = $("input[name=allterms]:checked").length;
+				
+				if(total != checked) $("#alltermsOk").prop("checked", false);
+				else $("#alltermsOk").prop("checked", true); 
+			});
+
+      $("#withdrawal-btn").on("show.bs.modal", function () {
+        var top = $("body"); $("body").css('overflow-y','hidden').css('width','auto').css('height','auto');
+      }).on("hide.bs.modal", function () {
+        var top = $("body").position().top; $("body").css('position','relative').css('overflow-y','auto');
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

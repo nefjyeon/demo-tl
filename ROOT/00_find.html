@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<title>TripLink 이메일 찾기</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!--<header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>-->
+
+  <!--<div class="wrapper container-fluid">-->
+  <div class="container-fluid fadeInDown">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel findform-panel">
+
+      <div class="titleCont">
+        <h1><img src="imgs/logo-bl.png" alt=""></h1>
+        <h2>이메일 찾기</h2>
+      </div>
+      <div class="form-login form-join fadeIn first">
+        <form action="">
+          <fieldset>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 이름(별명)</div>
+              <div class="col-sm-12">
+                <input type="text" id="yourname" class="fadeIn" name="yourname" placeholder="이름(별명)">
+              </div>
+              <div class="alert">
+                <!-- case 1 -->
+                <p><i></i>이름을 입력하세요.</p>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* SMS 인증</div>
+              <div class="col-sm-12 input-group">
+                <input type="text" class="form-control" placeholder="휴대폰번호 입력 (숫자만)" aria-label="" aria-describedby="button-addon1">
+                <div class="input-group-append">
+                  <button class="btn-md btn-formin" type="button" id="button-addon1">인증번호 발송</button>
+                  <!--<button class="btn-md btn-formin" type="button" id="button-addon1">재발송</button>-->
+                </div>
+              </div>
+              <!--<div class="col-sm-12">
+                <input type="text" id="sms1" class="fadeIn third" name="sms1" placeholder="휴대폰번호 입력(숫자만)">
+                <button>인증번호 발송</button>
+                <button>재발송</button>
+              </div>-->
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 input-group">
+                <input type="text" class="form-control" placeholder="인증번호 입력" aria-label="인증번호 입력" aria-describedby="button-addon2">
+                <!--veriCode는 인증 시에만 나타남 display:flex; 사용됨 -->
+                <div class="veriCode"><i>03:00</i></div>
+                <div class="input-group-append">
+                  <button class="btn-md btn-formin" type="button" id="button-addon2">인증하기</button>
+                  <!--<button class="btn-md btn-formin" type="button" id="button-addon1">인증완료</button>-->
+                </div>
+              </div>
+              <div class="alert">
+                <!-- case 1 -->
+                <p><i></i>SMS를 발송하였습니다. 인증번호를 입력하세요.</p>
+                <!-- case 2 (주석처리) -->
+                <!--<p><i></i>인증번호가 잘못되었습니다.</p>-->
+                <!-- case 3 (주석처리) -->
+                <!--<p><i></i>인증시간이 초과 되었습니다.</p>-->
+                <!-- case 4 (주석처리 / 4번 케이스만 파란 글자) -->
+                <!--<p class="alert-blue"><i></i>인증이 완료되었습니다.</p>-->
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <!--<div class="checking-login">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="alltermsOk" name="allterms">
+                <label class="custom-control-label" for="alltermsOk">로그인 상태 유지</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+                <label class="custom-control-label" for="customCheck1">아이디 저장</label>
+              </div>
+
+            </div>-->
+
+
+            <!--<input type="submit" class="fadeIn fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/01_home.html'" value="이메일로 로그인">-->
+            <div class="btn-group find-btn-group" role="group">
+              <button type="button" class="fadeIn btn-outline-secondary btn-lg third" onclick="location.href='https://design.realclick.co.kr/triplink-dash/00_login.html'">취소</button>
+              <button type="button" class="fadeIn btn-lg btn-secondary third" data-toggle="modal" data-target="#findeEmail">확인</button>
+            </div>
+          </fieldset>
+          <!--btn-outline-secondary-->
+        </form>
+      </div>
+      
+    </main>
+    
+    
+    
+    
+  </div>
+  
+  
+  <!--<div id="terms1modal" class="modal fade" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+  
+  <!-- 이메일 찾기 확인 모달 : 시작 -->
+  <div class="modal fade" id="findeEmail" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="findeEmailLabel" aria-hidden="true">
+    <div class="modal-dialog msgDialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- case 1 메시지-->
+          <p>가입된 휴대폰번호가 없습니다.</p>
+          <!-- case 2 메시지 주석처리 -->
+          <!--<p>이름(별명)과 휴대폰번호가 일치하지 않습니다.</p>-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 이메일 찾기 확인 모달 : 끝 -->
+    
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      //slidesPerView: 1,
+      //spaceBetween: 10,
+      //direction: 'vertical',
+      loop: true,
+      loopAdditionalSlides : 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      /*pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween:0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+/*        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },*/
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 38,
+        },
+        /*1400: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },*/
+      },
+    });
+    
+    $(document).ready(function() {
+      
+      // 대시보드 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".filtering-tag>ul>li").on("click", function(){
+        $.this = this;
+        $(".filtering-tag>ul>li").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+      
+      // 약관 동의 전체 체크 기능
+      $("#alltermsOk").click(function() {
+				if($("#alltermsOk").is(":checked")) $("input[name=allterms]").prop("checked", true);
+				else $("input[name=allterms]").prop("checked", false);
+			});
+			
+			$("input[name=allterms]").click(function() {
+				var total = $("input[name=allterms]").length;
+				var checked = $("input[name=allterms]:checked").length;
+				
+				if(total != checked) $("#alltermsOk").prop("checked", false);
+				else $("#alltermsOk").prop("checked", true); 
+			});
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

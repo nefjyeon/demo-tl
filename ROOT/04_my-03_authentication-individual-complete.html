@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+
+  <div class="container-fluid fadeInDown my">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">MY > 실명인증 > 개인</p>
+      </div>
+      <div class="wrap-search col-xl-12 col-xs-12 ">
+        </div>
+        <div class="form-login form-join fadeIn first">
+          <form action="">
+            <fieldset>              
+              <div class="form-group row">
+                <div class="titleCont business mb-2">
+                  <h3>기본 정보</h3>
+                </div>
+                <div class="col-sm-12 title-formin">* 이메일</div>
+                <div class="col-sm-12">
+                  <input type="text" id="id" class="fadeIn second disabled" name="id" placeholder="hhj@realclick.co.kr" disabled>
+                </div>
+              </div>
+              
+              <div class="form-group row activity-text">
+                <div class="col-sm-12 title-formin">* 휴대폰번호</div>
+                <div class="col-sm-12 input-group">
+                  <input type="text" class="disabled" placeholder="010-2078-1142" aria-label="" aria-describedby="button-addon1" disabled>
+                </div>
+              </div>
+              <div class="form-group row activity-text">
+                <div class="col-sm-12 title-formin">* 실명</div>
+                <div class="col-sm-12">
+                    <input type="text" id="" class="fadeIn third disabled" name="" placeholder="김*수" disabled>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-xs-12 col-sm-12 title-formin">* 주민등록번호</div>
+                <div class="col-sm-12 d-flex">
+                  <div class="col-xs-5 col-sm-6 resident">
+                    <input type="text" class="fadeIn third disabled" name="" placeholder="900101" disabled>
+                  </div>
+                  <div class="align-middle d-flex align-items-center">
+                    <p class="align-middle padding-le">-</p>
+                  </div>
+                  <div class="col-xs-5 col-sm-6 padding-ri">
+                    <input type="text" id="" class="fadeIn third disabled" name="" placeholder="******" disabled>
+                  </div>
+                </div>                
+                <div class="col-xs-12 col-sm-12 d-flex mt-3">
+                  <p class="small">주민등록번호 수집 이용 근거 법령</p>                  
+                </div>
+                <div class="col-xs-12 col-sm-12 d-flex mt-1">
+                  <p class="text-left small">
+                    소득세법 제144조, 제145조<br>
+                    소득세 원천징수 용도 외에는 사용하지 않습니다.<br>
+                    개인정보는 암호화하여 안전하게 처리됩니다.
+                  </p>
+                </div>
+
+              </div>
+              <div class="form-group row">             
+
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12 d-flex align-items-center mb-2">
+                  <div class="col-sm-3 d-inline-block px-0 business-text">* 본인인증</div>
+                  <!-- <div class="col-sm-9 d-flex">
+                    <p class="text-left">PASS를 실행하여 본인인증을 해주세요.</p>
+                  </div> -->
+                </div> 
+                <div class="col-9 col-sm-12 d-flex mb-2 align-items-center">
+                  <div class="col-12 col-sm-6 d-inline-block complete">인증완료</div>
+                </div>
+                <div class="custom-control provide custom-checkbox mt-4">
+                  <input type="checkbox" class="custom-control-input" id="terms4" name="allterms">
+                  <label class="custom-control-label" for="terms4">개인정보 제공에 동의합니다.</label>
+                </div>
+                <!-- <div class="col-sm-12">
+                  <input type="text" class="fadeIn third" name="screenshot" placeholder="파일을 마우스로 끌어오세요.">
+                </div> -->
+              </div>
+            </fieldset>                  
+            <div class="btn-group form-btn-group" role="group">              
+              <button type="button" class="fadeIn btn-lg btn-secondary fourth" onclick="location.href=''">이전</button>
+            </div>
+          </form>
+        </div>
+    </main>
+  </div>
+  <div class="modal fade" id="save-btn" tabindex="-1" aria-labelledby="save-btn" aria-hidden="true">
+    <div class="modal-dialog withdrawal-modal">
+      <div class="modal-content withdrawal-modal">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title">회원탈퇴신청</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>저장하였습니다.<br>
+            담당자의 심사 후 적용됩니다.</p>
+        </div>
+        <div class="modal-footer">          
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+  </script>
+
+
+</body>
+</html>

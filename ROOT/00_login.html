@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<title>TripLink 로그인</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!--<header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>-->
+
+  <!--<div class="wrapper container-fluid">-->
+  <div class="container-fluid fadeInDown">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-6 px-0 login-panel">
+
+      <div class="titleCont">
+        <h1>
+          <img src="imgs/logo-bl.png" alt="" onclick="location.href='https://design.realclick.co.kr/triplink/home.html'"><!-- onclick 이벤트 홈(인트로)으로 이동 기능 추가 -->
+        </h1>
+        <h2>로그인</h2>
+      </div>
+      <div class="form-login fadeIn first">
+        <form action="">
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="이메일">
+          <input type="password" id="password" class="fadeIn third" name="login" placeholder="비밀번호">
+          <div class="alert">
+            <!-- case 1 -->
+            <p>가입되지 않은 이메일입니다.</p>
+            <!-- case 2 (주석처리) -->
+            <!--<p>잘못된 비밀번호입니다.</p>-->
+          </div>
+          <div class="checking-login">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+              <label class="custom-control-label" for="customCheck1">아이디 저장</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+              <label class="custom-control-label" for="customCheck2">로그인 상태 유지</label>
+            </div>
+          </div>
+          <!--<input type="submit" class="fadeIn fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/01_home.html'" value="이메일로 로그인">-->
+          <button type="button" class="fadeIn btn-lg btn-secondary fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/01_home.html'">이메일로 로그인</button>
+        </form>
+        <div class="find-account">
+          <span><a href="https://design.realclick.co.kr/triplink-dash/00_find.html">아이디 찾기</a></span>
+          <span><a href="https://design.realclick.co.kr/triplink-dash/00_resetpw.html">비밀번호 찾기</a></span>
+          <span><a href="https://design.realclick.co.kr/triplink-dash/00_join.html">회원가입</a></span>
+        </div>
+        <!--
+        // Remind Passowrd
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+        -->
+        <div class="simpleLogin">
+          <p>간편로그인</p>
+          <ul class="type-login d-flex justify-content-center">
+            <li>
+              <button type="button">
+                <img src="imgs/simple-naver.jpg" alt="네이버로 간편로그인">
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <img src="imgs/simple-kakao.jpg" alt="카카오로 간편로그인">
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <img src="imgs/simple-google.jpg" alt="구글로 간편로그인">
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!--<div class="termsLink">
+          <span><a href="">이용약관</a></span>
+          <span><a href="">개인정보처리방침</a></span>
+        </div>-->
+      </div>
+      
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      //slidesPerView: 1,
+      //spaceBetween: 10,
+      //direction: 'vertical',
+      loop: true,
+      loopAdditionalSlides : 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      /*pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween:0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+/*        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },*/
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 38,
+        },
+        /*1400: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },*/
+      },
+    });
+    
+    $(document).ready(function() {
+      
+      // 대시보드 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".filtering-tag>ul>li").on("click", function(){
+        $.this = this;
+        $(".filtering-tag>ul>li").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

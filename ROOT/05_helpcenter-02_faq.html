@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+  </header>
+
+  <div class="container-fluid fadeInDown">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content">
+      
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">Help Center > FAQ</p>
+      </div>
+      <div class="titleCont">
+        <h2>FAQ</h2>
+      </div>
+      <!-- FAQ 영역 시작 -->
+      <div class="wrap-helpcenter col-xl-12 col-xs-12 col-12">
+        
+        <form action="">
+          <fieldset>               
+            <div class="d-flex row col-sm-12 table-filtering-field">
+              <div class="col col-sm-1 col-md-1 custom-control">
+                <select name="" id="" class="custom-select custom-select-sm">
+                  <option value="" selected>전체</option>
+                  <option value="">공지</option>
+                  <option value="">가이드</option>
+                  <option value="">이벤트</option>
+                </select>
+              </div>
+              <div class="col col-sm-8 col-md-6 col-lg-4">
+                <div class="d-flex input-flex">
+                  <input type="text" placeholder="제목, 내용 검색">
+                  <button type="button" class="btn-search"><img src="imgs/btn_search.png" alt="검색하기"></button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+            
+        <div class="col-sm-12 mt-4 mb-5">
+          
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-toggle="pill" data-target="#faq1" type="button" aria-selected="true">전체</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="pill" data-target="#faq2" type="button" aria-selected="false">가입 및 탈퇴</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="pill" data-target="#faq3" type="button" aria-selected="false">정보변경</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="pill" data-target="#faq4" type="button" aria-selected="false">출금</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="pill" data-target="#faq5" type="button" aria-selected="false">일반</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="pill" data-target="#faq6" type="button" aria-selected="false">기타</button>
+            </li>
+          </ul>
+          <div class="boderLine"></div>
+          <!--탭 컨텐츠 시작-->
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="faq1">
+              <!-- 아코디언~페이지네이션 요소를 각 tab-pane 에 삽입 -->
+              <!--아코디언1-->
+              <div class="accordion" id="accoF1">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false">
+                        <div>전체</div>
+                        <div>Q. 미성년자도 가입이 가능한가요?</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse1" class="collapse" data-parent="#accoF1">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" >
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 2</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse2" class="collapse" data-parent="#accoF1">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.2
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 3</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse3" class="collapse" data-parent="#accoF1">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.3
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 3</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse4" class="collapse" data-parent="#accoF1">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.3
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 3</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse5" class="collapse" data-parent="#accoF1">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.3
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--아코디언1-->
+              
+              <!-- 페이지네이션 / 시작 -->
+              <div class="col-12">
+                <nav aria-label="Page navigation mt-5">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">&lt;&lt;</a>
+                    </li>
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">&lt;</a>
+                    </li>
+                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">&gt;</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">&gt;&gt;</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- 페이지네이션 / 끝 -->
+              
+            </div>
+            
+            <div class="tab-pane fade" id="faq2">
+              <!--아코디언2-->
+              <div class="accordion" id="accoF2">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse1-2" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요?</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse1-2" class="collapse" data-parent="#accoF2">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2-2" aria-expanded="false" >
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 2</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse2-2" class="collapse" data-parent="#accoF2">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.2
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse3-2" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 3</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse3-2" class="collapse" data-parent="#accoF2">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.3
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse4-2" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 3</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse4-2" class="collapse" data-parent="#accoF2">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.3
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse5-2" aria-expanded="false">
+                        <div>가입 및 탈퇴</div>
+                        <div>Q. 미성년자도 가입이 가능한가요? 3</div>
+                        <b class="caret">
+                          <span></span>
+                        </b>
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapse5-2" class="collapse" data-parent="#accoF2">
+                    <div class="card-body">
+                      A. 미성년자는 보호자의 동의하에 가입이 가능합니다.3
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--아코디언2-->
+              
+              <!-- 페이지네이션 / 시작 -->
+              <div class="col-12">
+                <nav aria-label="Page navigation mt-5">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">&lt;&lt;</a>
+                    </li>
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">&lt;</a>
+                    </li>
+                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">&gt;</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">&gt;&gt;</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- 페이지네이션 / 끝 -->
+            </div>
+            <div class="tab-pane fade" id="faq3">
+              <p>정보변경</p>
+            </div>
+            <div class="tab-pane fade" id="faq4">
+              <p>출금</p>
+            </div>
+            <div class="tab-pane fade" id="faq5">
+              <p>일반</p>
+            </div>
+            <div class="tab-pane fade" id="faq6">
+              <p>기타</p>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

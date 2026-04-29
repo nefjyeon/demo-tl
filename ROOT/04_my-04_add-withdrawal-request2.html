@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!--<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar fixed-top sticky-top ">-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+    <!--<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"></header>-->
+  <!--<div class="wrapper container-fluid">-->
+    <div class="container-fluid fadeInDown my">
+      <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+        <div class="sub-title mt-3 pt-4 d-flex justify-content-end">
+          <p class="">MY > 출금/계좌관리 > 출금신청</p>
+        </div>
+        
+        <div class="form-login form-join fadeIn first col-12-padding">
+          <form action="">
+            <fieldset class="d-flex row justify-content-center">    
+              <div class="titleCont mb-3">
+                <!-- <h1><img src="imgs/logo-bl.png" alt=""></h1> -->
+                <h2>출금신청</h2>
+              </div>
+              <div class="form-group row mt-3 mb-5 col-sm-11 account04 justify-content-center">
+                <div class="d-flex account04 justify-content-center">
+                  <div class="number-outline d-flex align-items-center justify-content-center">
+                    <p>1</p>
+                  </div>
+                </div>
+                <div class=" d-flex number-line align-items-center"><img src="imgs/icon-line.png"></div>
+                <div class=" d-flex account04 justify-content-center">
+                  <div class="number d-flex align-items-center justify-content-center">
+                    <p>2</p>
+                  </div>
+                </div>
+                <div class="  d-flex number-line align-items-center"><img src="imgs/icon-line.png"></div>
+                <div class="  d-flex account04 justify-content-center">
+                  <div class="number-outline d-flex align-items-center justify-content-center">
+                    <p>3</p>
+                  </div>
+                </div>
+              </div>
+              <!--2024.05.28 수정-->
+              <div class="form-group mt-2 row request-border-top text-left account04 col-sm-11 justify-content-center">
+                <ul class="col-sm-12 mt-4 request-ul">
+                  <li class="mb-2">※ 안 내 ※</li>
+                  <li class="mb-1">- 사업자 회원은 세금계산서를 선발행 해주세요.</li>
+                  <li class="mb-1">- 계좌번호가 맞는지 확인하세요.</li>
+                  <li class="mb-1">- 본인이 직접 출금신청한 것이 맞는지 반드시 확인하세요.</li>
+                  <li>- 비정상적인 실적과 이상거래가 확인되면 포인트회수 및 출금이 반려될 수 있습니다.</li>
+                </ul>
+              </div>
+              <!--2024.05.28 수정-->
+              <div class="form-group row request-group col-sm-11 account04 join-border-top">
+                <div class="col-sm-12 title-formin">SNS 인증</div>
+                <div class="col-sm-12 input-group">
+                  <input type="text" class="form-control" placeholder="휴대폰번호 입력 (숫자만)" aria-label="" aria-describedby="button-addon1">
+                  <div class="input-group-append">
+                    <button class="btn-md btn-formin" type="button" id="button-addon1">인증번호 발송</button>
+                    <!--<button class="btn-md btn-formin" type="button" id="button-addon1">재발송</button>-->
+                  </div>
+                </div>
+                <!--<div class="col-sm-12">
+                  <input type="text" id="sms1" class="fadeIn third" name="sms1" placeholder="휴대폰번호 입력(숫자만)">
+                  <button>인증번호 발송</button>
+                  <button>재발송</button>
+                </div>-->
+              </div>
+              <div class="form-group row col-sm-11 account04 request-group Number">
+                <div class="col-sm-12 input-group">
+                  <input type="text" class="form-control" placeholder="인증번호 입력" aria-label="인증번호 입력" aria-describedby="button-addon2">
+                  <!--veriCode는 인증 시에만 나타남 display:flex; 사용됨 -->
+                  <div class="veriCode"><i>03:00</i></div>
+                  <div class="input-group-append">
+                    <button class="btn-md btn-formin" type="button" id="button-addon2">인증하기</button>
+                    <!--<button class="btn-md btn-formin" type="button" id="button-addon1">인증완료</button>-->
+                  </div>
+                </div>
+                <div class="alert">
+                  <!-- case 1 -->
+                  <p><i></i>SMS를 발송하였습니다. 인증번호를 입력하세요.</p>
+                  <!-- case 2 (주석처리) -->
+                  <!--<p><i></i>이미 가입된 휴대폰번호 입니다.</p>-->
+                  <!-- case 3 (주석처리) -->
+                  <!--<p><i></i>인증번호가 잘못되었습니다.</p>-->
+                  <!-- case 4 (주석처리) -->
+                  <!--<p><i></i>인증시간이 초과 되었습니다.</p>-->
+                  <!-- case 5 (주석처리 / 5번 케이스만 파란 글자) -->
+                  <!--<p class="alert-blue"><i></i>인증이 완료되었습니다.</p>-->
+                </div>
+              </div>
+              <div class="request-web join-border-top row align-items-center col-sm-11 account04 mt-4">
+                <div class="mt-5 request-text">
+                  <p>
+                    <span>하나은행 110000111222</span> 계좌로
+                  </p>
+                </div>
+              </div>
+              <div class="request-web form-group request-border-bottom row align-items-center col-sm-11 account04 mt-3">
+                <div class="col-sm-11 d-flex row align-items-center mb-5">
+                  <div class="request-text">
+                    <p>세금 및 수수료 등을 제외한</p>
+                  </div>
+                  <div class="col-sm-5 col-4 account04 d-flex align-items-center request-input">
+                    <input type="text" class="form-control text-right disabled" placeholder="0" disabled>
+                    <label class="request">P</label>
+                  </div>
+                  <div class="request-text">를 출금신청 할까요?</div>
+                </div>                
+              </div> 
+              <div class="request-mo form-group join-border-top request-border-bottom row align-items-center col-sm-11 account04 mt-3">
+                <div class="request-text title mb-4">
+                  <p><span>하나은행 110000111222</span> 계좌로 세금 및 수수료 등을 제외한</p>
+                </div>
+                <div class="col-sm-11 d-flex row align-items-center mb-4">
+
+                  <div class="col-sm-5 col-6 account04 d-flex align-items-center request-input">
+                    <input type="text" class="form-control text-right disabled" placeholder="0" disabled>
+                    <label class="request">P</label>
+                  </div>
+                  <div class="request-text">를 출금신청 할까요?</div>
+                </div>                
+              </div> 
+              <div class="btn-group form-btn-group mt-5 " role="group">                
+                <button type="button" class="fadeIn btn-outline-secondary btn-lg fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/04_my-04_add-withdrawal-request.html'">이전</button>
+                <button type="button" class="fadeIn btn-lg btn-secondary fourth" onclick="location.href='https://design.realclick.co.kr/triplink-dash/04_my-04_add-withdrawal-request2.html'">출금신청</button>
+                <!--출금신청 모달 -> 출금신청을 하시겠습니까?-->
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+    </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

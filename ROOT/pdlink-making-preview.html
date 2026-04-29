@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<title>상품링크 미리보기</title>
+<style type="text/css">
+  *{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  -webkit-text-size-adjust:none;
+  text-decoration:none;
+  list-style:none;
+  border:none;
+  margin:0;
+  padding:0;
+  font-family:Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; 
+}
+html, body {
+  margin:0;
+  padding:0;
+  margin:0 auto;
+  letter-spacing:-.02em;
+}
+body {
+  height:100%;
+  background-color:#fff;
+  min-height:100vh;
+  overflow:overlay;
+  overflow-x:hidden;
+  padding-right:0 !important;
+  background-color:#fff;
+  font-family:Pretendard;
+  position:relative;
+  font-size:16px;
+  color:#393939;
+  display:flex;
+  flex-direction:column;
+}
+/* OTHERS */
+
+*:focus {
+  outline:none;
+} 
+  
+.product-wrap .card {
+  border:none;
+}
+.product-wrap {
+  position:relative;
+}
+.product-wrap>a {
+  color:#393939;
+  border-radius:1rem;
+  border-radius:12px;
+  overflow:hidden;
+  background:#ccc;
+  border:1px solid #e0e0e0;
+  box-shadow:0 0 8px rgba(4, 2, 3, .27);
+  display:block;
+}
+
+
+.row.product-grid.list-pick {
+  margin:0 auto;
+  width:100%;
+}
+.product-grid.list.list-pick .card-body {
+  padding:1.8rem 11rem 1.4rem 3rem;
+}
+.list-pick .product-wrap {
+  padding-left:.2rem;
+  padding-right:.2rem;
+}
+.list-pick .product-wrap>a {
+  box-shadow:none;
+}
+.product-wrap .card-text {
+  color:#a0a0a0;
+  font-size:86%;
+}
+.card-term {
+  margin-top:.5rem;
+  font-weight:500;
+  font-size:94%;
+}
+.list-pick .card-button-group>.product-go {
+  width:90.7px;
+}
+.list-pick .card-text-long {
+  font-size:86%;
+  margin-top:.65rem;
+  min-height:80px;
+}
+
+.making-caution {
+  text-align:center;
+  margin-top:1rem;
+  padding:2rem .2rem 0;
+  border-top:1px dashed #a0a0a0;
+}
+.making-caution>div {
+  border:1px solid #a0a0a0;
+  border-radius:12px;
+  padding:2rem 1rem;
+  font-weight:600;
+}
+.making-caution p {
+  color:#f00;
+  margin-top:.5rem;
+}
+
+.preview-wrap.col-sm-12,
+.preview-wrap.col-md-6,
+.preview-wrap.col-lg-3,
+.making-wrap fieldset.col-sm-12 {
+  padding-left:0;
+  padding-right:0;
+  
+}
+.making-wrap.col-sm-12 {
+  padding-left:0rem;
+  padding-right:0rem;
+}
+.making-title {
+  font-weight:bold;
+  font-size:120%;
+  padding:.5rem 0;
+}
+.preview a {
+  cursor:auto;
+}
+.product-grid.list .preview .product-wrap {
+  height:280px;
+  height:380px;
+}
+.product-grid.list .preview .product-wrap {
+  margin-bottom:0rem !important;
+  padding-left:0rem; 
+  padding-right:0rem; 
+}
+.product-grid.list-pick .preview .card-img-top {
+  width:100%;
+  height:12rem;
+  object-fit:cover;
+  border-radius:0;    
+}
+.product-grid.list .preview .card {
+  flex-direction:column;
+}
+
+.product-grid.list .preview .card-body {
+  padding:1.7rem 1rem;
+}
+.product-grid.list .preview .card-title {
+  font-size:110%;
+}
+.product-price {
+  text-align:right;
+  font-size:26px;
+  font-weight:bold;
+  letter-spacing:-.05em;
+  margin-top:1em;
+}
+.product-grid.list .preview .product-price {
+  margin-top:2rem;
+}
+.product-wrap .card-title.brand {
+  display:flex;
+}
+.brand-symbol {
+  width:50px;
+  display:block;
+  margin-right:.25rem;
+}
+.brand-symbol>img {
+  width:90%;
+  vertical-align:middle;
+}
+
+.card-title.brand>.brand-title {
+  font-size:18px;
+  max-width:228.75px;
+  font-weight:600;
+  line-height:1.2em;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+      <div class="product-grid list list-pick">
+        <div class="making-wrap col-sm-12">
+          <form action="">
+            <fieldset class="col-sm-12 d-flex align-items-stretch">
+              <div class="preview-wrap col-sm-12 col-md-6 col-lg-3 ">
+                <div class="preview">
+                  <!--화면내용~~~-->
+                  <div class="product-wrap d-flex align-items-stretch">
+                    <a class="card-wrap" href="">
+                      <div class="card h-100">
+                        <img src="imgs/goods1.jpg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                          <!-- h5 요소와 그 하위 요소까지 변경사항 있습니다. -->
+                          <h5 class="card-title brand">
+                            <span class="brand-symbol"><img src="http://dev-www.triplink.kr/assets/images/common/logo_yellowBsymb.png" alt=""></span>
+                            <span class="brand-title">[발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천sfsdfsdfasdfd</span>
+                          </h5>
+                          <p class="card-text">해외패키지 &gt; 동남아 &gt; 발리</p>
+                          <p class="product-price">1,000,000 원 ~</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      
+      
+
+
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

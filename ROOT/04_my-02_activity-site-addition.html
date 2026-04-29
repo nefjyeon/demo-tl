@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center">
+    
+  </header>
+  <div class="container-fluid fadeInDown my">
+    <main class="main-panel col-sm-12 col-md-8 col-xl-8 px-0 login-panel joinform-panel my">
+      <div class="sub-title pt-4 d-flex justify-content-end">
+        <p class="">MY > 활동사이트/앱 추가</p>
+      </div>
+      <div class="titleCont">
+        <h2>활동사이트/앱 추가</h2>
+      </div>
+
+      <div class="form-login form-join fadeIn first">
+        <form action="">
+          <fieldset>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 분류</div>
+              <div class="col-sm-12 custom-control">
+                <select name="" id="" class="custom-select custom-select-sm">
+                  <option value="" selected>분류선택</option>
+                  <option value="">30개</option>
+                  <option value="">50개</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 사이트/앱 이름</div>
+              <div class="col-sm-12">
+                <input type="text" class="fadeIn third" name="site" placeholder="사이트 또는 모바일 앱 이름을 입력하세요.">
+              </div>
+            </div>
+            <div class="form-group row activity-text">
+              <div class="col-sm-12 title-formin">* URL</div>
+              <div class="col-sm-12">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="본인이 활동하는 사이트 URL 또는 앱마켓의 URL을 입력하세요" id="floatingTextarea2" style="height: 100px"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row activity-text">
+              <div class="col-sm-12 title-formin">* 설명</div>
+              <div class="col-sm-12">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="추가로 필요한 설명이 있다면 입력하세요." id="floatingTextarea2" style="height: 100px"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 스크린샷</div>
+              <div class="col-sm-12 d-flex mb-2 align-items-center">
+                <div class="col-2 col-sm-1 d-inline-block px-0  file-btn">내 PC</div>
+                <div class="col-sm-11 px-0 d-flex justify-content-end file">
+                  10MB 이하 파일
+                </div>
+              </div>
+              <div class="col-sm-12 my-file">
+                <input type="file" class="custom-file-input" id="fileSelect" name="screenshot" accept=".pptx,.hwp,.jpg,.png">
+                <label class="custom-file-label selected" for="fileSelect">유튜브관리화면.jpg</label>
+                <!-- <label class="custom-file-label form-control selected" for="fileSelect" placeholder="파일을 마우스로 끌어오세요."></label> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 title-formin">* 기타증빙서류</div>
+              <div class="col-sm-12 d-flex mb-2 align-items-center">
+                <div class="col-2 col-sm-1 d-inline-block px-0  file-btn">내 PC</div>
+                <div class="col-sm-11 px-0 d-flex justify-content-end file">
+                  10MB 이하 파일
+                </div>
+              </div>
+              <div class="col-sm-12 my-file">
+                <input type="file" class="custom-file-input" id="fileSelect" name="file-etc" accept=".pptx,.hwp,.jpg,.png">
+                <label class="custom-file-label selected" for="fileSelect">파일을 선택하세요</label>
+                <!-- <label class="custom-file-label form-control selected" for="fileSelect" placeholder="파일을 마우스로 끌어오세요."></label> -->
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-group row d-flex col-sm-12 mb-3 mt-2 px-0 activity-text">
+            <ul class="explanation">
+              <li class="mb-1">등록하지 않은 채널에서의 활동은 부정행위(어뷰징)으로 간주될 수 있으며 <br>계정정지 및 수익금 환수가 진행될 수 있습니다.
+              </li>
+              <li class="mb-1">활동사이트/앱의 심사는 영업일 기준 1~3일 소요됩니다.</li>
+            </ul>
+          </div>            
+          <div class="btn-group form-btn-group" role="group">
+            <button type="button" class="fadeIn btn-outline-secondary btn-lg fourth" onclick="location.href=''">취소</button>
+            <button type="button" class="fadeIn btn-lg btn-secondary fourth" data-toggle="modal" data-target="#save-btn">저장</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <div class="modal fade" id="save-btn" tabindex="-1" aria-labelledby="save-btn" aria-hidden="true">
+    <div class="modal-dialog withdrawal-modal">
+      <div class="modal-content withdrawal-modal">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title">회원탈퇴신청</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>저장하였습니다.<br>
+            담당자의 심사 후 적용됩니다.</p>
+        </div>
+        <div class="modal-footer">          
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    
+  </script>
+
+
+</body>
+</html>

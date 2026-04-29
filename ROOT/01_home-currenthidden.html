@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center"></header>
+  <div class="container-fluid ">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content ">
+
+      <div class="titleCont">
+        <h2>Home</h2>
+      </div>
+      <ul class="sumTabs">
+        <li class="nav-item col-xs-12 "><!--col-sm-4-->
+          <a class="nav-link">
+            <div class="sumTabsBtn greeting">
+              <p><strong>리얼클릭한선임</strong> 님
+              <br>안녕하세요.</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item col-xs-12 ">
+          <a class="nav-link">
+            <div class="sumTabsBtn">
+              <p>보유포인트</p>
+              <p>130,000 P</p>
+            </div>
+            <div class="sumAccuTab">
+              <span>누적</span>
+              <span>1,130,000 P</span>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item col-xs-12 ">
+          <a class="nav-link">
+            <div class="sumTabsBtn">
+              <p>출금신청</p>
+              <p>10,000 P</p>
+            </div>
+            <div class="sumAccuTab">
+              <span>누적출금완료</span>
+              <span>1,130,000 P</span>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item col-xs-12 panel-noti">
+          <div class="sumTabsBtn">
+            <p>공지사항</p>
+          </div>
+          <div class="panel-noti-list">
+           
+            <!-- PC 1920 이상 화면 공지글 a.row.nav-link 최대 4건까지만 노출 -->
+            <!-- PC 화면 a.row.nav-link 4개 한 줄일 때 날짜는 자동으로 가려짐 -->
+            <!-- 모바일 화면 공지사항은 아래로 떨어지며 길게 가로로 꽉 차며 날짜가 자동으로 보임 -->
+            <!-- 1920 미만 화면 공지글 a.row.nav-link 4번째 .nav-link:nth-child(4) 
+            감추기 -->
+            <a class="row nav-link" href="">
+              <span class="col ">공지</span>
+              <span class="col ">트립링크 서비스 오픈 323343</span>
+              <span class="col ">2023.12.12</span>
+            </a>
+              
+            <a class="row nav-link" href="">
+              <span class="col ">공지</span>
+              <span class="col ">트립링크 서비스 공지 sdsdfdss</span>
+              <span class="col ">2023.12.12</span>
+            </a>
+
+            <a class="row nav-link" href="">
+              <span class="col ">공지</span>
+              <span class="col ">부정적립 포인트회수 안내 sdfsd</span>
+              <span class="col ">2023.12.12</span>
+            </a>
+            <a class="row nav-link" href="">
+              <span class="col ">공지</span>
+              <span class="col ">부정적립 포인트회수 안내 sdfsd</span>
+              <span class="col ">2023.12.12</span>
+            </a>
+            
+          </div>
+
+        </li>
+      </ul>
+      <!--공지 영역 시작-->
+      <div class="wrap-notice col-xl-12 col-xs-12 mt-70">
+       
+        <ul class="row d-flex flex-nowrap justify-content-center">
+          <li class="col-xs-12 col-md-6 col py-0 px-0">
+            <a href=""><img src="imgs/noti-banner1.jpg" alt=""></a>
+          </li>
+          <li class="col-xs-12 col-md-6 col py-0 px-0 ml-2">
+            <a href=""><img src="imgs/noti-banner2.jpg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      <!--공지 영역 끝-->
+      <!--상품 영역 시작-->
+      <div class="subtitleCont mt-90">
+        <p class="subText-gray"><span class="text-red">마감임박<i class="font-italic">!</i>&nbsp;&nbsp;큰 적립<i class="font-italic">!</i></span>&nbsp;&nbsp;이 상품 어때요? 😍</p>
+      </div>
+      <!-- swiper 상품 슬라이드 시작-->
+      <div class="swiper mySwiper mt-34">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <img src="imgs/goods1.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <img src="imgs/goods2.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <span class="badge badge-light pd-deadline">마감 D-7</span>
+                <img src="imgs/goods3.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <span class="badge badge-light pd-deadline">마감 D-2</span>
+                <img src="imgs/goods4.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <img src="imgs/goods5.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <img src="imgs/goods6.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <img src="imgs/goods7.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide product-wrap">
+            <a class="card-wrap" href="">
+              <div class="card h-100">
+                <span class="badge badge-light product-go">상품정보<i></i></span>
+                <img src="imgs/goods8.jpg" class="card-img-top">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">
+                  [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                  <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                  <p class="product-price">1,000,000 원 ~</p>
+                </div>
+                <div class="saving-point d-flex justify-content-center align-items-center">
+                  <p>최대</p>
+                  <strong>+ 10,000 P</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!--<div class="swiper-pagination"></div>-->
+      </div>
+      <!-- swiper 상품 슬라이드 끝-->
+      
+      
+      <div class="subtitleCont mt-90">
+        <p class="subText-gray"><span>엄선된 추천/인기상품</span> 여기 있어요. 👍</p>
+      </div>
+      <div class="filtering-tag navbar-nav-scroll ">
+        <ul class="d-flex">
+          <li class="badge badge-light active">전체</li>
+          <li class="badge badge-light">#발리</li>
+          <li class="badge badge-light">#방콕</li>
+          <li class="badge badge-light">#유럽배낭여행</li>
+          <li class="badge badge-light">#출발확정</li>
+          <li class="badge badge-light">#코타키나발루</li>
+          <li class="badge badge-light">#타이완</li>
+          <li class="badge badge-light">#동남아패키지</li>
+        </ul>
+      </div>
+      <div class="row product-grid recommand">
+       
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <img src="imgs/goods1.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <img src="imgs/goods2.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <span class="badge badge-light pd-deadline">마감 D-7</span>
+              <img src="imgs/goods3.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <span class="badge badge-light pd-deadline">마감 D-2</span>
+              <img src="imgs/goods4.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 4.0% P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <img src="imgs/goods5.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <img src="imgs/goods6.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <img src="imgs/goods7.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 10,000 P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-wrap col-sm-12 col-md-6 col-lg-3 mb-5 d-flex align-items-stretch">
+          <!-- 추후 적용될 광고용 상품 소스 시작 -->
+          <span class="badge badge-light pd-a-d">AD<span>｜</span><i class="bi bi-x-lg close"></i></span>
+          <!-- 추후 적용될 광고용 상품 소스 끝 -->
+          <a class="card-wrap" href="">
+            <div class="card h-100">
+              <span class="badge badge-light product-go">상품정보<i></i></span>
+              <img src="imgs/goods8.jpg" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                [발리X배틀트립]NO쇼핑+밀크레딧 증정! 발리 전통 분위기 특별한 여행 명소 신혼여행 강력추천</h5>
+                <p class="card-text">해외패키지 > 동남아 > 발리</p>
+                <p class="product-price">1,000,000 원 ~</p>
+              </div>
+              <div class="saving-point d-flex justify-content-center align-items-center">
+                <p>최대</p>
+                <strong>+ 4.0% P</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+      
+      <a class="more-go d-flex justify-content-center col-lg-3 col-md-4 col-xs-12" href="">더 보기&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
+      
+      
+      
+      <!--상품 영역 끝-->
+      
+      <div class="btm-banner d-flex mt-34">
+        <a class="d-flex justify-content-center" href="">
+          <img src="imgs/btm-banner.jpg" alt="">
+        </a>
+      </div>
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      //slidesPerView: 1,
+      //spaceBetween: 10,
+      //direction: 'vertical',
+      loop: true,
+      loopAdditionalSlides : 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      /*pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween:0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+/*        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },*/
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 38,
+        },
+        /*1400: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },*/
+      },
+    });
+    
+    $(document).ready(function() {
+      
+      // 대시보드 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".filtering-tag>ul>li").on("click", function(){
+        $.this = this;
+        $(".filtering-tag>ul>li").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center"></header>
+
+  <div class="container-fluid ">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content">
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">Product > 다이나믹배너 > 생성</p>
+      </div>
+      <div class="titleCont">
+        <h2>다이나믹배너 생성</h2>
+      </div>
+
+      <!--상품 영역 시작-->            
+      <!--<div class="row product-grid list list-pick">-->
+      <div class="row product-grid list list-pick">
+               
+        <!--<div class="making-caution col-sm-12 mb-3">
+          <div>
+            반드시 아래와 같은 문구를 삽입해주세요.
+            <p>“이 게시물은 트립링크에서 제공받은 상품을 소개하였으며 활동에 따른 소정의 수수료를 제공받습니다.”</p>
+          </div>
+        </div>-->
+        
+        <div class="making-wrap col-sm-12 dy">
+          <form action="">
+            <fieldset class="col-sm-12 mb-3 d-flex align-items-stretch">
+
+              <!--<div class="preview-wrap col-sm-12 col-md-6 col-lg-3 mb-5 ">-->
+              <div class="dynamic-wrap col-sm-12 col-md-5 col-lg-3 ">
+                <ul>
+                  <li class="d-flex">
+                    <div class="making-title">배너이름</div>
+                    <div class="dy-control">
+                      <input type="text" id="b-name" class="b-name" name="b-name" maxlength='30' placeholder="배너이름 입력">
+                      <!-- 글자수제한 기능 -->
+                      <div class="text-length">
+                        <span class="text-length-cnt">0</span> /
+                        <span class="text-length-total">30</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <div class="making-title">배너콘텐츠</div>
+                    <div class="custom-control select-wrap dy-control">
+                      <input type="text" id="pick-region" class="pick-region" name="pick-region" maxlength='30' placeholder="노출할 지역을 선택해 주세요." readonly>
+                      <button type="button" class="btn btn-dy" data-toggle="modal" data-target="#pickRegion">지역 선택</button>
+                      <!--<select name="" id="" class="custom-select custom-select-sm">
+                        <option selected hidden>배너콘텐츠 선택</option>
+                        <option value="">콘텐츠1</option>
+                        <option value="">콘텐츠2</option>
+                      </select>-->
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <div class="making-title">배너크기</div>
+                    <div class="banner-size-wrap">
+                      <p>배너 크기를 선택하세요.</p>
+                      <ul class="banner-size-list">
+                        <li class="badge">728x90</li>
+                        <li class="badge">336x280</li>
+                        <li class="badge">300x250</li>
+                        <li class="badge">160x600</li>
+                        <li class="badge">1024x768</li>
+                        <li class="badge">300x100</li>
+                        <li class="badge">120x600</li>
+                        <li class="badge">300x600</li>
+                        <li class="badge">250x250</li>
+                        <li class="badge">200x200</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="d-flex flex-row">
+                    <div class="making-title">노출</div>
+                    <div class="">
+                      <div class="toggle_btn">
+                        <label for="toggle" class="toggleSwitch blue active">
+                          <span class="toggleButton">                                          
+                          </span>
+                          <span class="toggle_on" style="display:block;">on</span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="d-flex flex-row">
+                    <!-- 초기화 버튼 모달 생성 -->
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-sm btn-reset">초기화 <i></i></button>
+                    <button type="button" class="btn btn-sm btn-secondary">배너생성하기</button>
+                  </li>
+                </ul>
+                
+                
+              </div>
+              
+              <!-- 미리보기 영역에 col-lg-8 클래스 추가됨  -->
+              <div class="making-code dy col-lg-8">
+                <ul>
+                  <li class="d-flex">
+                    <div class="making-title">미리보기</div>
+                    <div class="preview-banner">
+                      <div>
+                        <!-- 배너 생성 시 아래 p 태그 전체 삭제 -->
+                        <p>배너생성하기를 하시면 표시됩니다.</p>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="d-flex">
+                    <div class="making-title">자바스크립트</div>
+                    <div class="copy-wrap">
+                      <textarea name="" id="" placeholder="배너생성하기를 하시면 표시됩니다."></textarea>
+                      <button type="button" class="btn">복사</button>
+                    </div>
+                  </li>
+                  
+                  <li class="d-flex">
+                    <div class="making-title">iframe</div>
+                    <div class="copy-wrap">
+                      <textarea name="" id=""placeholder="배너생성하기를 하시면 표시됩니다."></textarea>
+                      <button type="button" class="btn">복사</button>
+                    </div>
+                  </li>
+                </ul>
+                
+              </div>
+
+            </fieldset>
+            
+            
+         
+         
+          </form>
+          
+          
+            
+        </div>
+        
+      </div>
+      <!-- Modal -->
+            <div class="modal fade modal-dy" id="pickRegion" data-backdrop="static" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="pickRegion" aria-hidden="true">
+              <div class="modal-dialog dy-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="pickRegionTitle">배너 콘텐츠 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>배너에 노출할 지역을 선택하세요. 선택한 지역의 상품이 노출됩니다.</p>
+                    <div class="pick-region-wrap">
+                      <ul class="pick-region-list">
+                        <li>
+                          랜덤(추천순)
+                        </li>
+                        <li>아시아 전체
+                        </li>
+                        <li>싱가포르
+                        </li>
+                        <li>하노이/다낭/나트랑/푸꾸옥
+                        </li>
+                        <li>인도네시아(발리 등)
+                        </li>
+                        <li>방콕/푸켓/치앙마이
+                        </li>
+                        <li>마닐라/세부/보홀/보라카이
+                        </li>
+                        <li>대만</li>
+                        <li>인도</li>
+                        <li>중국 전체</li>
+                        <li>북경</li>
+                        <li>홍콩/마카오</li>
+                        <li>몽골/내몽고</li>
+                        <li>코타키나발루/쿠알라룸푸르</li>
+                        <li>사이판</li>
+                        <li>라오스</li>
+                        <li>유럽 전체</li>
+                        <li>동유럽 전체</li>
+                        <li>동유럽/발칸3국</li>
+                        <li>북유럽/발틱3국</li>
+                        <li>북유럽</li>
+                        <li>서유럽</li>
+                        <li>아프리카</li>
+                        <li>일본 전체</li>
+                        <li>혼슈 전체</li>
+                        <li>홋카이도/북해도</li>
+                        <li>대마도</li>
+                        <li>큐슈/후쿠오카</li>
+                        <li>오사카/간사이</li>
+                        <li>도쿄</li>
+                        <li>오키나와</li>
+                        <li>북미 전체</li>
+                        <li>미동부</li>
+                        <li>하와이</li>
+                        <li>미서부</li>
+                        <li>남태평양 전체</li>
+                        <li>호주</li>
+                        <li>괌</li>
+                        <li>팔라우</li>
+                        <li>중남미</li>
+                        <li>국내여행/제주도</li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-secondary">저장</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+      
+
+      <!--상품 영역 끝-->
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    
+    
+    $(document).ready(function() {
+      
+      const toggleList = document.querySelectorAll(".toggleSwitch");
+      toggleList.forEach(($toggle) => {
+        $toggle.onclick = () => {
+          $toggle.classList.toggle('active');
+        }
+      });
+      $(function (){
+        $(".blue").click(function (){
+          $(".toggle_on").toggle();
+        });
+      });
+      $(function (){
+        $(".blue2").click(function (){
+          $(".toggle_on2").toggle();
+        });
+      });
+      $(function (){
+        $(".blue3").click(function (){
+          $(".toggle_on3").toggle();
+        });
+      });
+      
+      // 배너 크기 버튼 선택 이벤트
+      $(".banner-size-list>li").on("click", function(){
+        $.this = this;
+        $(".banner-size-list>li").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 배너 크기 버튼 선택 이벤트
+      $(".pick-region-list>li").on("click", function(){
+        $.this = this;
+        $(".pick-region-list>li").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>

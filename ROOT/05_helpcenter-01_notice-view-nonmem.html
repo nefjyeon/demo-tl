@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="swiper-11.0.7/package/swiper-bundle.min.css">
+<!-- only css -->
+<link href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/contents.css">
+<title>TripLink 관리자 페이지</title>
+</head>
+<body>
+  <!--헤더 인클루드-->
+  <!-- 비회원용 클래스 및 아이디 header-nonmem 추가 -->  
+  <header class="navbar navbar-expand-sm fixed-top d-flex justify-content-center align-items-center header-nonmem" id="header-nonmem">
+  </header>
+  
+  <!-- 비회원용 클래스 nonmem 추가 -->  
+  <div class="container-fluid nonmem fadeInDown">
+    <main class="main-panel col-sm-12 col-md-12 col-xl-12 px-0 bd-content view-panel">
+      
+      <div class="sub-title pt-4 col-sm-12 d-flex justify-content-end">
+        <p class="">Help Center > 공지사항 > 상세</p>
+      </div>
+      <div class="titleCont">
+        <!--<h2>공지사항</h2>-->
+      </div>
+      <!-- 공지사항 영역 시작 -->
+      <div class="wrap-helpcenter col-xl-12 col-xs-12 col-12">
+            
+        <div class="col-sm-12 mt-4 mb-5">
+          <!--<ul class="col-sm-12 d-flex noti-header">-->
+          <ul class="col-sm-12  noti-header">
+            <li>No. 100</li>
+            <li>공지</li>
+            <li><div>서비스 점검</div></li>
+            <li>등록일 2023.01.01</li>
+          </ul>
+          <div class="noti-view">
+            <div>
+              안녕하세요. 트립링크 공지입니다.<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              .<br>
+              감사합니다.
+            </div>
+          </div>
+          <ul class="col-sm-12 noti-list">
+            <li class="d-flex">
+              <div>다음</div>
+              <div>공지</div>
+              <div>주요약관위반 안내</div>
+              <div>2023.01.02</div>
+            </li>
+            <li class="d-flex">
+              <div>이전</div>
+              <div>이벤트</div>
+              <div>추천인 추가 인센티브 연장</div>
+              <div>2023.01.01</div>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="btn-lg btn-secondary" onclick="location.href='05_helpcenter-01_notice-nonmem.html'">목록</button>
+        
+      </div>
+    </main>
+  </div>
+  <!--푸터 클라우드-->
+  <footer class="footer d-flex justify-content-center"></footer>
+  <!--bd-footer py-4 py-md-5 mt-5 bg-body-tertiary-->
+  
+    
+  <!-- JavaScript Bundle with Popper -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="swiper-11.0.7/package/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script>
+    
+    var swiper = new Swiper(".category-big-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+    var swiper2 = new Swiper(".category-mid-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+
+    
+    $(document).ready(function() {
+      
+      // 대시보드 - 상품링크
+      // 상품 검색 필드 최상위 카테고리 필터링 클릭 이벤트
+      $(".category-big>.d-flex a").on("click", function(){
+        $.this = this;
+        $(".category-big>.d-flex a").removeClass("active");
+        $($.this).addClass("active");
+      });
+      // 상품 검색 필드 카테고리 하위 항목 버튼 다중선택 이벤트(토글버튼)
+      $(".category-mid>button").on("click", function(){
+        $.this = this;
+        //$(".category-mid>button").removeClass("active");
+        $($.this).toggleClass("active");
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 개별 삭제 이벤트
+      $(".keyword-list>.badge>i").click(function(){
+        $.this = this;
+        $($.this).parent("li").remove();
+      });
+      
+      // 상품링크 - 선택된 하위 카테고리 키워드 초기화(전체 삭제) 이벤트
+      $(".keyword-filtering>p>button").click(function(){
+        $(".keyword-list>.badge").remove();
+      });
+      // 상품링크 - 메인화면 추천/인기상품 필터링 클릭 이벤트
+      $(".table-filtering .btn-tab").on("click", function(){
+        $.this = this;
+        $(".table-filtering .btn-tab").removeClass("active");
+        $($.this).addClass("active");
+      });
+      
+    });
+    
+  </script>
+
+
+</body>
+</html>
