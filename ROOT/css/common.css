@@ -439,7 +439,7 @@ header .dropdown-item {
 .alert>p>i {
   width:16px;
   height:16px;
-  background:url(/assets/images/common/icon-exclamation-red.png) 0 0 no-repeat;
+  background:url(../imgs/icon-exclamation-red.png) 0 0 no-repeat;
   background-size:contain;
   display:inline-block;
   margin-right:.5em;
@@ -500,7 +500,7 @@ header .dropdown-item {
 
 
 .popInfoBox a>i {
-  background:url(/assets/images/common/icon_logout-on.png) 0 0 no-repeat;
+  background:url(../imgs/icon_logout-on.png) 0 0 no-repeat;
   background-size:contain;
 }
 
@@ -579,7 +579,7 @@ header .dropdown-item {
   clear:both;
 }
 .custom-select {
-  background-image:url(/assets/images/common/caret-down-fill.svg);
+  background-image:url(../imgs/caret-down-fill.svg);
   border-color:#7c7c7c;
 }
 .custom-select-sm {

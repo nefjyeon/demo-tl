@@ -174,7 +174,7 @@ button>img {
   background:linear-gradient(120deg, #72b7b2, #238bec);
 }
 .sumTabs li:first-child .sumTabsBtn {
-  background:url(/assets/images/common/sumTabImg.png) no-repeat;
+  background:url(../imgs/sumTabImg.png) no-repeat;
   background-position:85% bottom;
 }
 .sumTabs li:first-child .sumTabsBtn.greeting>p {
@@ -267,7 +267,7 @@ button>img {
   margin-left:.5em;
   width:8px;
   height:14px;
-  background:url(/assets/images/common/arrow-greet.png) no-repeat;
+  background:url(../imgs/arrow-greet.png) no-repeat;
   /*background:url(../imgs/arrow-greet.png) no-repeat;*/
   background-size:contain;
   margin-top:3px;
@@ -408,7 +408,7 @@ button>img {
   position:absolute;
   top:-7px;
   left:23%;
-  background-image:url(/assets/images/common/imoji-bulb.png);
+  background-image:url(../imgs/imoji-bulb.png);
   width:33px;
   height:35px;*/
 }
@@ -565,7 +565,7 @@ button>img {
   width:13px;
   height:13px;
   display:inline-block;
-  background:url(/assets/images/common/icon-makeLink.png) 0 0 no-repeat;
+  background:url(../imgs/icon-makeLink.png) 0 0 no-repeat;
   background-size:contain;
   vertical-align:text-top;
   margin-top:1.5px;
@@ -586,7 +586,7 @@ button>img {
 }
 .card-button-group .badge.product-go>i {
   /*background:url(../imgs/icon-toLink-w.png) 0 0 no-repeat;*/
-  background:url(/assets/images/common/icon-toLink-w.png) 0 0 no-repeat;
+  background:url(../imgs/icon-toLink-w.png) 0 0 no-repeat;
 }
 
 .product-go {
@@ -666,7 +666,7 @@ padding: 0.25em 0.4em;
   width:13px;
   height:13px;
   display:inline-block;
-  background:url(/assets/images/common/icon-toLink.png) 0 0 no-repeat;
+  background:url(../imgs/icon-toLink.png) 0 0 no-repeat;
   background-size:contain;
   vertical-align:text-top;
   margin-top:1px;
@@ -722,7 +722,7 @@ padding: 0.25em 0.4em;
 .saving-point>i {
   width:22px;
   height:22px;
-  background:url(/assets/images/common/icon-exclamation.png) 0 0 no-repeat;
+  background:url(../imgs/icon-exclamation.png) 0 0 no-repeat;
   background-size:contain;
   display:inline-block;
   margin-right:.5em;
@@ -988,7 +988,7 @@ form .category-mid>button.active>span {
   position:absolute;
   left:74%;
   top:18px;
-  background:url(/assets/images/common/btn_plus.png) no-repeat;
+  background:url(../imgs/btn_plus.png) no-repeat;
   background-size:contain;
   /*
   position:absolute;
@@ -1004,7 +1004,7 @@ form .category-mid>button.active>span {
 }*/
 .category-more i[aria-expanded="true"]:before {
   /*content:'-';*/
-  background:url(/assets/images/common/btn_minus.png) no-repeat;
+  background:url(../imgs/btn_minus.png) no-repeat;
   background-size:contain;
 /*  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;*/
 }
@@ -1041,7 +1041,7 @@ form .category-mid>button.active>span {
   margin:.1rem;
 }
 .keyword-list>.badge>i {
-  background:url(/assets/images/common/btn_close-mini.png) 0 0 no-repeat;
+  background:url(../imgs/btn_close-mini.png) 0 0 no-repeat;
   background-size:contain;
   display:inline-block;
   width:11px;
@@ -1062,7 +1062,7 @@ form .category-mid>button.active>span {
 }
 .btn-reset>i,
 .keyword-filtering button>i {
-  background:url(/assets/images/common/icon-reset.png) no-repeat;
+  background:url(../imgs/icon-reset.png) no-repeat;
   background-size:contain;
   width:14px;
   height:14px;
@@ -1656,7 +1656,7 @@ form .copy-wrap button[type=button]{
 }
 .wrap-report .input-daterange>label::after {
   content:'';
-  background:url(/assets/images/common/icon_calendar.png) 0 0 no-repeat;
+  background:url(../imgs/icon_calendar.png) 0 0 no-repeat;
   display:block;
   position:absolute;
   right:12px;
@@ -1710,7 +1710,7 @@ form .copy-wrap button[type=button]{
   transition:all .15s ease 0s;
 }
 .sortingArrow i:last-child {
-  background:url(/assets/images/common/sortingArrowDown.png) 0 0 no-repeat;
+  background:url(../imgs/sortingArrowDown.png) 0 0 no-repeat;
   top:0px;
   transform:rotateX(0deg);
 }
@@ -2176,7 +2176,7 @@ form .copy-wrap button[type=button]{
   overflow-x:auto;
 }*/
 .form1to1-cont>span>i {
-  background:url(/assets/images/common/icon-addfile.png) 0 0 no-repeat;
+  background:url(../imgs/icon-addfile.png) 0 0 no-repeat;
   width:16px;
   height:16px;
   display:inline-block;
@@ -2229,7 +2229,7 @@ form .copy-wrap button[type=button]{
 }
 .input-daterange::after {
   content:'';
-  background:url(/assets/images/common/icon_calendar.png) 0 0 no-repeat;
+  background:url(../imgs/icon_calendar.png) 0 0 no-repeat;
   display:block;
   position:absolute;
   right:15px;
@@ -2434,7 +2434,7 @@ form .copy-wrap button[type=button]{
 .in-basic-info i{
   width: 30px;
   height: 30px;
-  background: url(/assets/images/common/icon_error_2.png) no-repeat;
+  background: url(../imgs/icon_error_2.png) no-repeat;
   background-size: contain;
   display: inline-block;
 
@@ -2442,7 +2442,7 @@ form .copy-wrap button[type=button]{
 .in-basic-info2 i{
   width: 30px;
   height: 38px;
-  background: url(/assets/images/common/icon_phone.png) no-repeat;
+  background: url(../imgs/icon_phone.png) no-repeat;
   background-size: contain;
   display: inline-block;
   margin-left: 0em;
@@ -2450,7 +2450,7 @@ form .copy-wrap button[type=button]{
 .in-basic-info2-letter i{
   width: 30px;
   height: 30px;
-  background: url(/assets/images/common/icon_letter.png) no-repeat;
+  background: url(../imgs/icon_letter.png) no-repeat;
   background-size: contain;
   display: inline-block;
   margin-left: -.18em;
@@ -2675,7 +2675,7 @@ form .copy-wrap button[type=button]{
   padding: 2.5em 0;
 }
 .activity i{
-  background: url("/assets/images/common/icon_add2.png") no-repeat;
+  background: url("../imgs/icon_add2.png") no-repeat;
   background-size: contain;
   width: 30px;
   height: 30px;
@@ -2947,7 +2947,7 @@ form .copy-wrap button[type=button]{
   margin-left: .5em;
   width: 10px;
   height: 18px;
-  background: url(/assets/images/common/arrow-greet.png) no-repeat;
+  background: url(../imgs/arrow-greet.png) no-repeat;
   background-size: contain;
 }
 .withdrawa-acco p{
@@ -3536,7 +3536,7 @@ form .copy-wrap button[type=button]{
     height:175px;
   }
   .sumTabs li:first-child .sumTabsBtn {
-    background: url(/assets/images/common/sumTabImg.png) no-repeat;
+    background: url(../imgs/sumTabImg.png) no-repeat;
     background-position: 88% bottom;
     background-size:34%;
     /*background-size:contain;*/
@@ -5255,7 +5255,7 @@ form .copy-wrap button[type=button]{
     display:flex;
   }
   .sumTabs li:first-child .sumTabsBtn {
-    background:url(/assets/images/common/sumTabImg.png) no-repeat;
+    background:url(../imgs/sumTabImg.png) no-repeat;
     background-position:88% bottom;
     background-size:34%;
   }
@@ -5323,7 +5323,7 @@ form .copy-wrap button[type=button]{
     width:auto;
   }
   /*.sumTabs li:first-child .sumTabsBtn {
-    background:url(/assets/images/common/sumTabImg.png) no-repeat;
+    background:url(../imgs/sumTabImg.png) no-repeat;
     background-position:88% bottom;
     background-size:34%;
   }
@@ -5460,7 +5460,7 @@ form .copy-wrap button[type=button]{
   }
   /*.sumTabs li:last-child .sumTabsBtn,*/
   .sumTabs li:first-child .sumTabsBtn {
-    background:url(/assets/images/common/sumTabImg.png) no-repeat;
+    background:url(../imgs/sumTabImg.png) no-repeat;
     background-position:94% 6px;
     background-size:20%;
     height:94px;
@@ -6190,7 +6190,7 @@ form .copy-wrap button[type=button]{
   }
   /*.wrap-report .input-daterange>label::after {
     content:'';
-    background:url(/assets/images/common/icon_calendar.png) 0 0 no-repeat;
+    background:url(../imgs/icon_calendar.png) 0 0 no-repeat;
     display:block;
     position:absolute;
     right:12px;
@@ -6269,7 +6269,7 @@ form .copy-wrap button[type=button]{
     transition:all .15s ease 0s;
   }
   .sortingArrow i:last-child {
-    background:url(/assets/images/common/sortingArrowDown.png) 0 0 no-repeat;
+    background:url(../imgs/sortingArrowDown.png) 0 0 no-repeat;
     top:0px;
     transform:rotateX(0deg);
   }
@@ -6696,7 +6696,7 @@ form .copy-wrap button[type=button]{
     line-height:1.4em;
   }
   .form1to1-cont>span>i {
-    background:url(/assets/images/common/icon-addfile.png) 0 0 no-repeat;
+    background:url(../imgs/icon-addfile.png) 0 0 no-repeat;
     width:16px;
     height:16px;
     display:inline-block;
@@ -6742,7 +6742,7 @@ form .copy-wrap button[type=button]{
     padding-bottom:1rem;
   }*/
   .sumTabs li:first-child .sumTabsBtn {
-    background:url(/assets/images/common/sumTabImg.png) no-repeat;
+    background:url(../imgs/sumTabImg.png) no-repeat;
     background-position:94% 14px;
     background-size:14%;
   }
